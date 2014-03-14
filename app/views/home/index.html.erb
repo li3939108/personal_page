@@ -4,7 +4,7 @@
 			<div class="topbar-left" style="display: inline-block">
 				<ul class="nav">
 					<% @top_nav_lists.values.each do |list| %>
-					<li class="top-list <%= "active" if list[:text] == @init_active %>">
+					<li class="top-list top-list-<%= list[:href][1..-1] %> <%= "active" if list[:text] == @init_active %>">
 						<a class="top-nav top-nav-left" href="<%= list[:href] %>">
 							<span class="icon icon-left <%= list[:icon].split('-')[0] %> <%= list[:icon] %>"></span>
 							<span class="text"><%= list[:text] %></span>
@@ -40,12 +40,12 @@
 		College Station, TX
 	</div>
 	<div class="container panel" id="<%= @top_nav_lists['about'][:href][1..-1] %>">
-		<h3><%= @top_nav_lists['about'][:text] %></h3>
+		<h3><span class="para-title"><a class="anchor" href="<%= @top_nav_lists['about'][:href] %>"><span class="octicon octicon-link"></span></a><%= @top_nav_lists['about'][:text] %></span></h3>
 		<p>I am a Ph.D. student majoring <%= link_to("Computer Engineering", @cesg_site) %>, in Dept. of ECE at TAMU. Currently, I am doing research on Computer-Aided Design for Very Large Scale Integrated circuits (VLSI CAD) advised by <a href="http://cesg.tamu.edu/faculty/Jiang-Hu/">Dr. Jiang Hu</a>.</p>
 		<p>Before I came to TAMU, I received my B.S. degree in Electronic &amp; Information Science from <%= link_to("Nanjing University", @nju_site) %> in 2013.</p>
 	</div>
 	<div class="container panel" id="<%= @top_nav_lists['contacts'][:href][1..-1] %>">
-		<h3><%= @top_nav_lists['contacts'][:text] %></h3>
+		<h3><span class="para-title"><a class="anchor" href="<%= @top_nav_lists['contacts'][:href] %>"><span class="octicon octicon-link"></span></a><%= @top_nav_lists['contacts'][:text] %></span></h3>
 		<ul class="vertical">
 		<% @contacts.each do |list| %>
 			<li>

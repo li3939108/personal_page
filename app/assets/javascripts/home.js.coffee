@@ -16,3 +16,13 @@ $ ->
     $(this).addClass('active')
   $('.top-nav-left').click ->
     $('#home').height( $($(this).attr('href')).offset().top + $(window).height() - parseInt($('#home').css('padding-top'), 10) )
+  $('.para-title').hover( 
+    ->
+      $(this).children('a.anchor').css('display', 'inline-block')
+    ->
+      $(this).children('a.anchor').css('display', 'none')
+  )
+  $('a.anchor').click ->
+    $('li.top-list').removeClass('active')
+    $('li.top-list-' + $(this).attr('href').substr(1)).addClass('active')
+    $('#home').height( $($(this).attr('href')).offset().top + $(window).height() - parseInt($('#home').css('padding-top'), 10) )

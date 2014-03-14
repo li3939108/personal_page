@@ -40,6 +40,15 @@ $link_color: #0084B4;
 	box-shadow: 0 4px 8px #e5e5e5 ;
 	margin:0px auto 10px auto ;
 }
+div.paragraph{
+	margin:10px 24px ;
+}
+a.anchor{
+	position:relative;
+	display:none;
+	width:0px;
+	left:-16px;
+}
 ul{
 	list-style: none;
 	padding: 0;
