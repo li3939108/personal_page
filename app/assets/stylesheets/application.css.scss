@@ -1,0 +1,112 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ *= require font-awesome
+ */
+$bg_gray : #f5f5f5;
+$text_color: #292433 ;
+@import  url(http://fonts.googleapis.com/css?family=Ubuntu);
+@font-face {
+  font-family: 'rosseta';
+  font-style: normal;
+  font-weight: 400;
+  src: local('rosseta'), url(https://abs.twimg.com/a/1394123900/font/t1/rosetta-icons-Regular.woff) format('woff');
+}
+body{
+	color: $text_color;
+	font-size: 14px;
+	line-height: 18px;
+	background: $bg_gray;
+	font-family: "ubuntu", "Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin: 0px;
+}
+h1{
+	display: block;
+	font-size: 2em;
+	font-weight: bold;
+}
+h3{
+	display: block;
+	font-size: 1.17em;
+	font-weight: bold;
+}
+.rst{
+	font-family: 'rosseta';
+}
+.rst-dots:before{content:"\f016";}
+.rst-favorite:before{content:"\f007";}
+.rst-reply:before{content:"\e007";}
+.rst-retweet:before{content:"\e008";}
+.rst-close:before{content:"\f00d";}
+.rst-logo:before{content:"\f000";}
+.rst-message:before{content:"\f003";}
+.rst-promoted:before{content:"\f004";}
+.rst-top:before{content:"\f007";}
+.rst-lifelineBadge:before{content:"\f000";}
+.rst-political:before{content:"\f004";}
+.rst-add:before{content:"\f01f";}
+.rst-check:before{content:"\f021";}
+.rst-remove:before{content:"\f01e";}
+.rst-favorite:before{content:"\f147";}
+.rst-favorited:before{content:"\f001";}
+.rst-reply:before{content:"\f151";}
+.rst-retweet:before{content:"\f152";}
+.rst-retweeted:before{content:"\f006";}
+.rst-dots:before{content:"\f150";}
+.rst-delete:before{content:"\f154";}
+.rst-camera:before{content:"\f027";}
+.rst-caretUp:before{content:"\f181";}
+.rst-caretLeft:before{content:"\f172";}
+.rst-caretRight:before{content:"\f173";}
+.rst-clock:before{content:"\f177";}
+.rst-close:before{content:"\f045";}
+.rst-cogWithCaret:before{content:"\f124";}
+.rst-collapseTweets:before{content:"\f051";}
+.rst-conversation:before{content:"\f157";}
+.rst-filter:before{content:"\f138";}
+.rst-follow:before{content:"\f175";}
+.rst-follower:before{content:"\f002";}
+.rst-following:before{content:"\f176";}
+.rst-geo:before{content:"\f031";}
+.rst-grid:before{content:"\f046";}
+.rst-list:before{content:"\f094";}
+.rst-markAllRead:before{content:"\f036";}
+.rst-media:before{content:"\f159";}
+.rst-mediaplay:before{content:"\f040";}
+.rst-message:before{content:"\f054";}
+.rst-person:before{content:"\f056";}
+.rst-photo:before{content:"\f158";}
+.rst-protected:before{content:"\f096";}
+.rst-search:before{content:"\f058";}
+.rst-summary:before{content:"\f156";}
+.rst-translator:before{content:"\f089";}
+.rst-unfollow:before{content:"\f097";}
+.rst-url:before{content:"\f098";}
+.rst-verified:before{content:"\f099";}
+.rst-caretLeft:before{content:"\f173";} 
+.rst-caretRight:before{content:"\f172";}
+.rst-fail:before{content:"\f000";}
+.rst-pinned:before{content:"\f003";}
+.rst-promoted:before{content:"\f004";}
+.rst-top:before{content:"\f007";}
+.rst-political:before{content:"\f004";}
+.rst-lifeline:before{content:"\f026";}
+.rst-lifelineBadge:before{content:"\f000";}
+.rst-dm:before{content:"\f054";}
+.rst-cog:before{content:"\f059";}
+.rst-home:before{content:"\f053";}
+.rst-connect:before{content:"\f050";}
+.rst-notifications:before{content:"\f055";}
+.rst-discover:before{content:"\f052";}
+.rst-me:before{content:"\f056";}
+.rst-bird:before{content:"\f179";}
+.rst-tweet:before{content:"\f029";}
