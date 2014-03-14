@@ -38,11 +38,7 @@ h3{
 /* octicons */
 @font-face{
 	font-family:'octicons';
-	src:url("/assets/octicons-0bb4a5129262e9b3a5aab81b5723586cc105b387.eot");
-	src:	url("/assets/octicons-0bb4a5129262e9b3a5aab81b5723586cc105b387.eot#iefix") format("embedded-opentype"),
-		url("/assets/octicons-d549163bd3eadcee80c641d30b6e3bbce07db469.woff") format("woff"),
-		url("/assets/octicons-e8799dda501b567e3851a9ff2324496e58f9342c.ttf") format("truetype"),
-		url("/assets/octicons-5bd882ea52a4e94bb62862655dbff5f85d238281.svg#octicons") format("svg");
+	src: font-url("octicons.woff") format("woff");
 	font-style:normal;
 }
 /* Ubuntu Font */
