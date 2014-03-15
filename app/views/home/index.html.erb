@@ -42,7 +42,7 @@
 	<div class="container panel" id="<%= @top_nav_lists['about'][:href][1..-1] %>">
 		<h3><%= @anchor_text.call('about') %></h3>
 		<p>I am a Ph.D. student majoring <%= link_to("Computer Engineering", @cesg_site) %>, in Dept. of ECE at TAMU. Currently, I am doing research on Computer-Aided Design for Very Large Scale Integrated circuits (VLSI CAD) advised by <a href="http://cesg.tamu.edu/faculty/Jiang-Hu/">Dr. Jiang Hu</a>.</p>
-		<p>Before I came to TAMU, I received my B.S. degree in Electronic &amp; Information Science in 2013 from <%= link_to("Nanjing University", @nju_site) %>, at Nanjing, P.R.China.</p>
+		<p>Before I came to TAMU, I received my B.S. degree in Electronic &amp; Information Science in 2013 from <%= content_tag(:em, link_to("Nanjing University", @nju_site) )  %>, at Nanjing, P.R.China.</p>
 	</div>
 	<div class="container panel" id="<%= @top_nav_lists['contacts'][:href][1..-1] %>">
 		<h3><%= @anchor_text.call('contacts') %></h3>
