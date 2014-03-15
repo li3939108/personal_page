@@ -36,7 +36,7 @@ class HomeController < ApplicationController
 				@email_gen.call('li3939108', 'tamu.edu') + view_context.tag('br') +
 				@email_gen.call('li3939108', 'gmail.com') , 
 				:icon => 'fa-envelope-o',
-				:lines => 2,
+				#:lines => 2,
 			},
 			{
 				:name => "Homepage", 
@@ -45,7 +45,7 @@ class HomeController < ApplicationController
 				view_context.link_to(@people_tamu_addr, @people_tamu_addr) + " (Yeah, it redirects "+ view_context.link_to("here", @heroku_site+@top_nav_lists['home'][:href], {'title' => @heroku_site[7..-1]})+")"+view_context.tag('br')+
 				view_context.link_to(@office_ip, @office_ip+@top_nav_lists['home'][:href])+" (Located in 321 WEB, available in TAMU campus network)",
 				:icon => 'fa-link',
-				:lines => 3,
+				#:lines => 3,
 			},
 			{:name => "Office", :content => "321 Wisenbaker Engineering Building (WEB)", :icon => 'fa-map-marker', :title => 'View location on Google Map' },
 			
