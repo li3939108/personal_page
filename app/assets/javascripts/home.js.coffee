@@ -26,3 +26,9 @@ $ ->
     $('li.top-list').removeClass('active')
     $('li.top-list-' + $(this).attr('href').substr(1)).addClass('active')
     $('#home').height( $($(this).attr('href')).offset().top + $(window).height() - parseInt($('#home').css('padding-top'), 10) )
+  $('.first-column').hover(
+    ->
+      $(this).children('.contact-icon').css('opacity', 1)
+    ->
+      $(this).children('.contact-icon').css('opacity', 0.3)
+  )

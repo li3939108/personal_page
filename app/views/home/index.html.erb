@@ -51,10 +51,7 @@
 		<ul class="vertical">
 		<% @contacts.each do |list| %>
 			<li>
-				<span class="first-column" style="<%= "line-height:"+ (list[:lines]*18).to_s + "px;" if list[:lines] != nil %>"><% case list[:name]
-						when "Office"%><%= content_tag('span', '', {:class => "contact-icon icon-link #{list[:icon].split('-')[0]} #{list[:icon]}", :id => "map-button", :title => "#{list[:title]}"}) %>
-					<%	else %><%=    content_tag('span', '', {:class => "contact-icon #{list[:icon].split('-')[0]} #{list[:icon]}"}) %>
-					<%end %>&nbsp;<%= content_tag('span', list[:name]) %></span><span class="second-column" style="<%="height:"+(list[:lines]*18).to_s + "px;" if list[:lines] != nil %>"><%= list[:content] %></span>
+				<span class="first-column" style="<%= "line-height:"+ (list[:lines]*18).to_s + "px;" if list[:lines] != nil %>"><% case list[:name] when "Office"%><%= content_tag('span', '', {:class => "contact-icon icon-link #{list[:icon].split('-')[0]} #{list[:icon]}", :id => "map-button", :title => "#{list[:title]}"}) %><%	else %><%= content_tag('span', '', {:class => "contact-icon #{list[:icon].split('-')[0]} #{list[:icon]}"}) %><%end %>&nbsp;&nbsp;<%=  list[:name] %></span><span class="second-column" style="<%="height:"+(list[:lines]*18).to_s + "px;" if list[:lines] != nil %>"><%= list[:content] %></span>
 			</li>
 		<% end %>
 		</ul>

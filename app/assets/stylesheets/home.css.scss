@@ -169,9 +169,11 @@ ul.vertical{
 	display: inline-block;
 }
 .contact-icon{
-	width: 15px;
 	margin-right: auto;
 	display: inline-block;
+	width: 1.2857142857142858em;
+	text-align: center;
+	opacity: 0.3;
 }
 span.icon-link{
 	transition: all .15s ease-in-out;
