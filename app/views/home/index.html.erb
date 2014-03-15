@@ -34,10 +34,12 @@
 	<div class="container panel">
 		<h1><%= @name %></h1>
 		<hr />
+		<p>
 		PhD student<br />
 		<%= link_to("Department of Electrical and Computer Engineering", @ece_site) %><br />
 		<%= link_to("Texas A&M University", @tamu_site) %><br />
 		College Station, TX
+		</p>
 	</div>
 	<div class="container panel" id="<%= @top_nav_lists['about'][:href][1..-1] %>">
 		<h3><%= @anchor_text.call('about') %></h3>
