@@ -21,7 +21,7 @@ class HomeController < ApplicationController
 				view_context.link_to(
 					view_context.content_tag(:span, '&nbsp;&nbsp;'.html_safe, {'class' => 'octicon octicon-link'}), 
 					@top_nav_lists[key][:href], 
-					{'class' => 'anchor'}) + 
+					{'class' => 'anchor', 'title' =>'Permalink'}) + 
 				@top_nav_lists[key][:text], 
 				{'class' => 'para-title'})
 		}
