@@ -21,6 +21,8 @@ body{
 	background: $bg_gray;
 	font-family: 'Ubuntu', "Helvetica Neue",Helvetica,Arial,sans-serif;
 	margin: 0px;
+  font-weight:normal;
+  -webkit-font-smoothing:antialiased;
 }
 h1{
 	display: block;
