@@ -49,6 +49,7 @@ a.anchor{
 	width:0px;
 	left:-17px;
 	line-height: 0;
+	transition: all .15s ease-in-out;
 }
 ul{
 	list-style: none;
@@ -171,12 +172,10 @@ ul.vertical{
 .contact-icon{
 	margin-right: auto;
 	display: inline-block;
-	width: 1.2857142857142858em;
-	text-align: center;
 	opacity: 0.3;
+	transition: all .15s ease-in-out;
 }
 span.icon-link{
-	transition: all .15s ease-in-out;
 }
 span.icon-as-hover, span.icon-link:hover{
 	color: $link_color ;

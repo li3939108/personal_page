@@ -19,14 +19,16 @@ class HomeController < ApplicationController
 		@anchor_text = Proc.new{|key|
 			view_context.content_tag(:span, 
 				view_context.link_to(
-					view_context.content_tag(:span, '&nbsp;&nbsp;'.html_safe, {'class' => 'octicon octicon-link'}), 
+					view_context.content_tag(:span, '&nbsp;&nbsp;'.html_safe, {'class' => 'anchor-icon octicon octicon-link'}), 
 					@top_nav_lists[key][:href], 
 					{'class' => 'anchor', 'title' =>'Permalink'}) + 
 				@top_nav_lists[key][:text], 
 				{'class' => 'para-title'})
 		}
 		@email_gen = Proc.new{|before, after|
-			view_context.content_tag(:span, before + ' ')+view_context.content_tag(:span, ' ', {:class => 'rst rst-connect', :style => 'font-size: x-small ;'}) + after
+			view_context.content_tag(:span, before + ' ') + 
+			view_context.content_tag(:span, '', {:class => 'rst rst-connect', :style => 'font-size: x-small ;'}) + 
+			view_context.content_tag(:span, ' ' + after )
 		}
 		@contacts = 
 		[

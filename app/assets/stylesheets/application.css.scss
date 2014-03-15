@@ -129,13 +129,21 @@ h3{
   src: local('Ubuntu Mono Bold Italic'), local('UbuntuMono-BoldItalic'), url(http://themes.googleusercontent.com/static/fonts/ubuntumono/v4/n_d8tv_JOIiYyMXR4eaV9TdDFIdpECMI9h0Dho3R_og.woff) format('woff');
 }
 
+.octicon{
+  font-family: 'octicons';
+}
 .rst{
   font-family: 'rosseta';
 }
 
 .fa {
-  display: inline-block;
   font-family: FontAwesome;
+}
+.fa,.rst,.octicon{
+  font-style: normal;
+  display: inline-block;
+  text-decoration:none;
+  vertical-align: baseline ;
 }
 
 /* Rosseta Font */
@@ -215,12 +223,6 @@ h3{
 .rst-bird:before{content:"\f179";}
 .rst-tweet:before{content:"\f029";}
 
-.octicon{
-	font-family: 'octicons';
-  font-style: normal;
-	display:inline-block;
-	text-decoration:none;
-}
 
 .octicon-alert:before{content:'\f02d'}
 .octicon-alignment-align:before{content:'\f08a'}
@@ -619,6 +621,8 @@ h3{
 }
 .fa-map-marker:before {
   content: "\f041";
+  position: relative;
+  left: 30%;
 }
 .fa-adjust:before {
   content: "\f042";
