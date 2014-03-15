@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 	def index
-		@last_modify_date = "2014-03-11"
+		@last_modify_date = "2014-03-15"
 		@cesg_site = "http://cesg.tamu.edu"
 		@tamu_site = "http://www.tamu.edu"
 		@ece_site = "http://engineering.tamu.edu/electrical"
