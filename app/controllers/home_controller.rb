@@ -16,6 +16,15 @@ class HomeController < ApplicationController
 			'contacts' => {:text => "Contacts", :icon => "fa-envelope", :href => "#contacts-panel"},
 		}
 		@init_active = "Home"
+		@anchor_text = Proc.new{|key|
+			view_context.content_tag(:span, 
+				view_context.link_to(
+					view_context.content_tag(:span, '&nbsp;&nbsp;'.html_safe, {'class' => 'octicon octicon-link'}), 
+					@top_nav_lists[key][:href], 
+					{'class' => 'anchor'}) + 
+				@top_nav_lists[key][:text], 
+				{'class' => 'para-title'})
+		}
 		@contacts = 
 		[
 			{:name => "Email", :content => view_context.content_tag(:span, "li3939108 ")+view_context.content_tag(:span, ' ', {:class => 'rst rst-connect', :style => 'font-size: x-small ;'}) + "tamu.edu", :icon => 'fa-envelope-o'},
