@@ -71,7 +71,7 @@ ul{
 	float: left;
 }
 .icon-left{
-	margin: 11px 0 0 10px;
+	margin: 11px 0 0 0px;
 }
 .icon-right{
 	margin: 11px 5px 0 0px;
@@ -91,15 +91,14 @@ ul{
 	font-weight: normal;
 	font-style: normal;
 	text-align: center;
-	-webkit-font-smoothing: antialiased;
 }
 
 .text {
 	float: left;
 	margin-left: 3px;
-	margin-top: 17px;
-	padding: 0;
-	font-size: 13px;
+	margin-top: 16px;
+	padding: 0 10px 0 0;
+	font-size: 12px;
 	font-weight: 400;
 	line-height: 1;
 }
@@ -117,7 +116,7 @@ a{
 	color: inherit;
 }
 a.top-nav-left{
-	padding: 0 13px 0 0px;
+	padding: 0px;
 	border-bottom: 4px solid $link_color;
 }
 a.top-nav-right{
