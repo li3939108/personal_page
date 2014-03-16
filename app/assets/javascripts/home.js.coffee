@@ -28,7 +28,7 @@ $ ->
     $('#home').height( $($(this).attr('href')).offset().top + $(window).height() - parseInt($('#home').css('padding-top'), 10) )
   $('.first-column').hover(
     ->
-      $(this).children('.contact-icon').css('opacity', 1)
+      $(this).children('.icon-link').css('opacity', 1)
     ->
-      $(this).children('.contact-icon').css('opacity', 0.3)
+      $(this).children('.icon-link').css('opacity', 0.3)
   )

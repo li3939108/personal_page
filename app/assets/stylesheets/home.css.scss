@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$contacts-first-column : 15% ;
+$contacts-first-column : 20% ;
 $link_color: #0084B4;
 
 
@@ -34,7 +34,7 @@ $link_color: #0084B4;
 .panel{
 	max-width: 810px ;
 	text-align:left;
-	padding: 10px 24px ;
+	padding: 10px 24px 10px 24px;
 	background: white;
 	border-top: 1px solid rgba(0,0,0,0.05);
 	box-shadow: 0 4px 8px #e5e5e5 ;
@@ -76,6 +76,10 @@ ul{
 }
 .icon-right{
 	margin: 11px 5px 0 0px;
+	opacity: .3;
+}
+.icon-right:hover{
+	opacity: 1;
 }
 .icon{
 	float: left;
@@ -172,7 +176,9 @@ ul.vertical{
 .contact-icon{
 	margin-right: auto;
 	display: inline-block;
+	width: 1em;
 	opacity: 0.3;
+	text-align: center ;
 	transition: all .15s ease-in-out;
 }
 span.icon-link{
@@ -190,11 +196,12 @@ div.foot{
 	margin-bottom: 10px ;
 	text-align: center;
 	border-top: 1px solid rgba(0,0,0,0.15);
-	color: #a5a5a5;
+	//color: #a5a5a5;
 	font-size: small;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.05);
 	background-color: transparent ;
+	opacity: .4;
 }
 div.foot>a.text-link{
 	border-bottom: dotted 1px #a5a5a5 ;
@@ -203,5 +210,6 @@ div.foot>a.text-link:hover{
 	border-bottom: solid 1px #858585 ;
 }
 div.foot>a:hover{
-	color: #858585;
+	color: #858585 ;
+	opacity: 1;
 }
