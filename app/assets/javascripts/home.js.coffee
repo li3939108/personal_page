@@ -18,9 +18,9 @@ $ ->
     $('#home').height( $($(this).attr('href')).offset().top + $(window).height() - parseInt($('#home').css('padding-top'), 10) )
   $('.para-title').hover( 
     ->
-      $(this).children('a.anchor').css('display', 'inline-block')
+      $(this).children('a.anchor').css('opacity', 1)
     ->
-      $(this).children('a.anchor').css('display', 'none')
+      $(this).children('a.anchor').css('opacity', 0)
   )
   $('a.anchor').click ->
     $('li.top-list').removeClass('active')
