@@ -45,3 +45,6 @@ gem "passenger"
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+#gem 'syntax-highlighter-rails'
+

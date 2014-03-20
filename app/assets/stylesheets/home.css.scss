@@ -73,10 +73,10 @@ ul{
 	float: left;
 }
 .icon-left{
-	margin: 11px 0 0 0px;
+	margin: 12px 0 0 0px;
 }
 .icon-right{
-	margin: 11px 5px 0 0px;
+	margin: 12px 5px 0 0px;
 	opacity: .3;
 }
 .icon-right:hover{
@@ -102,7 +102,7 @@ ul{
 .text {
 	float: left;
 	margin-left: 3px;
-	margin-top: 16px;
+	margin-top: 17px;
 	padding: 0 10px 0 0;
 	font-size: 12px;
 	font-weight: 400;
@@ -122,7 +122,7 @@ a{
 	color: inherit;
 }
 a.top-nav-left{
-	padding: 0px;
+	padding: 0px 10px;
 	border-bottom: 4px solid $link_color;
 }
 a.top-nav-right{
@@ -147,7 +147,8 @@ li.top-list:hover>a{
 	color: $link_color ;
 }
 li.active>a{
-	height: 42px ;
+	height: 46px ;
+	color: $link_color ;
 }
 .content{
 	width: 100%;
@@ -197,7 +198,6 @@ div.foot{
 	margin-bottom: 10px ;
 	text-align: center;
 	border-top: 1px solid rgba(0,0,0,0.15);
-	//color: #a5a5a5;
 	font-size: small;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	text-shadow: 0 1px 0 rgba(0,0,0,0.05);
@@ -213,4 +213,19 @@ div.foot>a.text-link:hover{
 div.foot>a:hover{
 	color: #858585 ;
 	opacity: 1;
+}
+
+pre.pseudo{
+	display: block;
+	font-family: 'Ubuntu Mono', monospace;
+	font-size: small ;
+	white-space: pre;
+	margin: 1em 0px;
+	text-align: left ;
+}
+span.comments{
+	opacity: .3 ;
+}
+a.content-link{
+	border-bottom: dotted 1px $link_color ;
 }

@@ -11,8 +11,9 @@ class HomeController < ApplicationController
 		@name = "Li, Chaofan"
 		@top_nav_lists = 
 		{
-			'home' => {:text => "Home", :icon => "rst-home", :href => "#home"}, 
-			'about' => {:text => "About Me", :icon => "rst-me", :href => "#about-me-panel"},
+			'home' => {:text => "Home", :icon => "fa-home", :href => "#home"}, 
+			'about' => {:text => "About Me", :icon => "fa-user", :href => "#about-me-panel"},
+			'tools' => {:text => "Tools", :icon => 'fa-wrench', :href => "#tools-panel"},
 			'contacts' => {:text => "Contacts", :icon => "fa-envelope", :href => "#contacts-panel"},
 		}
 		@init_active = "Home"
