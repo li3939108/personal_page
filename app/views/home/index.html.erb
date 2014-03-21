@@ -61,7 +61,7 @@
 		<h3><%= @anchor_text.call('tools') %></h3>
 		Some tools I implemented which I think may be useful.
 		<h5>Degree-balanced Random Graph Generator</h5>
-		<p>A program I designed (or someone has designed before but I don't know) and implemented to generate random graphs with exactly the same degree for every vertex. Simply selecting random pairs of vertices isn't necessarily generating a graph with all vertices having the same degree. However, the algorithm below certainly will generate a degree-balanced graph, if such a graph exists for a given number of vertices and a given degree for each vertex. </p> 
+		<p>A program I designed (or someone has designed before but I don't know) and implemented to generate random graphs with exactly the same degree for every vertex. Simply selecting random pairs of vertices isn't necessarily generating a graph with all vertices having the same degree. Recursively selecting a random pair of vertices with degree less than what we want (suppose it is D) will possibly generates several D-degree subgraphs and a complete subgraph, to which no edges can be added, with degree less than D. So, it still doesn't work. However, the algorithm below certainly will generate a degree-balanced graph, if such a graph exists for a given number of vertices and a given degree for each vertex. </p> 
 		<pre class="pseudo">
 <strong>procedure</strong> gen (<em>D</em>, <em>V</em>) <%= cmt("D is the degree, V is number of vertices") %>
 	<strong>for</strong> <em>i</em> from <em>0</em> to <em>D</em> <strong>do</strong> <%= cmt("Create D + 1 empty sets, to store vertices with corresponding degree") %>
