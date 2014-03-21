@@ -13,8 +13,8 @@ class HomeController < ApplicationController
 		{
 			'home' => {:text => "Home", :icon => "fa-home", :href => "#home"}, 
 			'about' => {:text => "About Me", :icon => "fa-user", :href => "#about-me-panel"},
-			'tools' => {:text => "Tools", :icon => 'fa-wrench', :href => "#tools-panel"},
 			'contacts' => {:text => "Contacts", :icon => "fa-envelope", :href => "#contacts-panel"},
+			'tools' => {:text => "Tools", :icon => 'fa-wrench', :href => "#tools-panel"},
 		}
 		@init_active = "Home"
 		@anchor_text = Proc.new{|key|

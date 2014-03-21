@@ -46,39 +46,7 @@
 		<p>I am a Ph.D. student majoring <%= link_to("Computer Engineering", @cesg_site) %>, in Dept. of ECE at TAMU. Currently, I am doing research on Computer-Aided Design for Very Large Scale Integrated circuits (VLSI CAD) advised by <a href="http://cesg.tamu.edu/faculty/Jiang-Hu/">Dr. Jiang Hu</a>.</p>
 		<p>Before I came to TAMU, I received my B.S. degree in Electronic &amp; Information Science in 2013 from <%= content_tag(:em, link_to("Nanjing University", @nju_site) )  %>, at Nanjing, P.R.China.</p>
 	</div>
-	<div class="container panel" id="<%= @top_nav_lists['tools'][:href][1..-1] %>">
-		<h3><%= @anchor_text.call('tools') %></h3>
-		Some tools I implemented which I think may be useful.
-		<h5>Degree-balanced Random Graph Generator</h5>
-		<p>A program I designed (or someone designed before me but I don't know) and implemented to generate random graphs with exactly the same degree for every vertex. Simply selecting random pairs of vertices isn't necessarily generating a graph with all vertices having the same degree. However, the algorithm below certainly will generate a degree-balanced graph, if such a graph exists for a given number of vertices and a given degree for each vertex.</p> 
-		<pre class="pseudo" style="display:none;">
-<strong>for</strong> <em>i</em> from <em>0</em> to <em>D</em> <strong>do</strong> <%= cmt("Create D + 1 empty sets, to store vertices with corresponding degree") %>
-	sets[<em>i</em>] ← [ ]
-<strong>end</strong>
-<strong>for</strong> <em>i</em> from <em>0</em> to <em>|V| - 1</em> <strong>do</strong> <%= cmt("Create |V| 0-degree vertices and store them in sets[0]") %>
-	sets[<em>0</em>][<em>i</em>] ← new_vertex(<em>i + 1</em>) <%= cmt("label of vertex starting from 1") %>
-<strong>end</strong>
-<strong>while</strong> length(sets[<em>D</em>]) <%= "<" %> <em>|V| - 1</em> <strong>do</strong> <%= cmt("There are still vertices that can be connected to get more degrees") %>
-	v1 ← pop( random_vertex( sets[<em>0</em> to <em>D-1</em>] ) ) <%= cmt("Extract a random vertex which is not in sets[D]") %>
-	l ← D − degree(v1) <%= cmt("v1 needs l more degrees") %>
-	<strong>for</strong> <em>i</em> from <em>1</em> to <em>l</em> <strong>do</strong>
-		v2 ← pop( random min-degree vertex ) 
-		<%= cmt("Extract a random vertex with minimal degree and not connected with v1") %>
-		connect(v1, v2) <%= cmt("Degree of v2 increase by 1, update the adjacency list of v1 and v2") %>
-		add( v2, sets[ degree(v2) ]) 
-	<strong>end</strong>
-	add(v1, sets[ <em>D</em> ])
-<strong>end</strong>
-<strong>return</strong> Graph( sets[<em>D</em>]) <%= cmt("sets[D] will be an adjacency list, create a graph with it") %>
-		</pre>
-		<p>
-		Python implementation: 
-		<a href="https://raw.githubusercontent.com/li3939108/max_bandwidth/master/graph.py" class="content-link">graph.py</a><br />
-		C implementation: 
-		<a href="https://raw.githubusercontent.com/li3939108/Partitioning/master/graph.c" class="content-link">graph.c</a>
-		<a href="https://raw.githubusercontent.com/li3939108/Partitioning/master/graph.h" class="content-link">graph.h</a>
-		</p>
-	</div>
+	
 	<div class="container panel" id="<%= @top_nav_lists['contacts'][:href][1..-1] %>">
 		<h3><%= @anchor_text.call('contacts') %></h3>
 		<ul class="vertical">
@@ -88,6 +56,50 @@
 			</li>
 		<% end %>
 		</ul>
+	</div>
+	<div class="container panel" id="<%= @top_nav_lists['tools'][:href][1..-1] %>">
+		<h3><%= @anchor_text.call('tools') %></h3>
+		Some tools I implemented which I think may be useful.
+		<h5>Degree-balanced Random Graph Generator</h5>
+		<p>A program I designed (or someone has designed before but I don't know) and implemented to generate random graphs with exactly the same degree for every vertex. Simply selecting random pairs of vertices isn't necessarily generating a graph with all vertices having the same degree. However, the algorithm below certainly will generate a degree-balanced graph, if such a graph exists for a given number of vertices and a given degree for each vertex. </p> 
+		<pre class="pseudo">
+<strong>procedure</strong> gen (<em>D</em>, <em>V</em>) <%= cmt("D is the degree, V is number of vertices") %>
+	<strong>for</strong> <em>i</em> from <em>0</em> to <em>D</em> <strong>do</strong> <%= cmt("Create D + 1 empty sets, to store vertices with corresponding degree") %>
+		sets[<em>i</em>] ← [ ]
+	<strong>end</strong>
+	<strong>for</strong> <em>i</em> from <em>0</em> to <em>|V| - 1</em> <strong>do</strong> <%= cmt("Create |V| 0-degree vertices and store them in sets[0]") %>
+		sets[<em>0</em>][<em>i</em>] ← new_vertex(<em>i + 1</em>) <%= cmt("label of vertex starting from 1") %>
+	<strong>end</strong>
+	<strong>while</strong> length(sets[<em>D</em>]) <%= "<" %> <em>|V| - 1</em> <strong>do</strong> <%= cmt("There are still vertices that can be connected to get more degrees") %>
+		v1 ← pop( random_vertex( sets[<em>0</em> to <em>D-1</em>] ) ) <%= cmt("Extract a random vertex which is not in sets[D]") %>
+		l ← D − degree(v1) <%= cmt("v1 needs l more degrees") %>
+		<strong>for</strong> <em>i</em> from <em>1</em> to <em>l</em> <strong>do</strong>
+			v2 ← pop( random min-degree vertex ) 
+			<%= cmt("Extract a random vertex with minimal degree and not connected with v1") %>
+			connect(v1, v2) <%= cmt("Degree of v2 increase by 1, update the adjacency list of v1 and v2") %>
+			add( v2, sets[ degree(v2) ]) 
+		<strong>end</strong>
+		add(v1, sets[ <em>D</em> ])
+	<strong>end</strong>
+	<strong>return</strong> Graph( sets[<em>D</em>]) <%= cmt("sets[D] will be an adjacency list, create a graph with it") %>
+<strong>end</strong>
+		</pre>
+		<p>
+<table style="width: 200px;">
+	<tr>
+Implementations
+	</tr>
+<tr>
+  <td>Python</td>
+  <td><%= link_to('graph.py', "https://raw.githubusercontent.com/li3939108/max_bandwidth/master/graph.py", {'class' => 'content-link file-link'}) %></td>
+</tr>
+<tr>
+  <td>C</td>
+  <td>
+<%= link_to('graph.h', "https://raw.githubusercontent.com/li3939108/Partitioning/master/graph.h", {'class' => 'content-link file-link'}) %>&nbsp;<%= link_to('graph.c', "https://raw.githubusercontent.com/li3939108/Partitioning/master/graph.c", {'class' => 'content-link file-link'}) %>
+	</td>
+</tr>
+</table>
 	</div>
 	<div class="foot">
 		Last updated at <span class="last-modify"><%= @last_modify_date %></span> · <a class="text-link" href="https://github.com/li3939108/personal_page">Github project for this site</a><br />
