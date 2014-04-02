@@ -19,12 +19,13 @@
 						<a class="top-nav top-nav-right" title="View me on Linkedin" href="http://www.linkedin.com/in/chaofanli/">
 							<span class="icon icon-right fa fa-linkedin-square"></span>
 						</a>
-					</li>
+					</li><!--
 					<li class="top-list">
 						<a class="top-nav top-nav-right" title="View my Github repos" href="https://github.com/li3939108?tab=repositories">
 							<span class="icon icon-right fa fa-github"></span>
 						</a>
 					</li>
+					-->
 				</ul>
 			</div>
 		</div>
@@ -60,8 +61,8 @@
 	<div class="container panel" id="<%= @top_nav_lists['tools'][:href][1..-1] %>">
 		<h3><%= @anchor_text.call('tools') %></h3>
 		Some tools I implemented which I think may be useful.
-		<h5>Degree-balanced Random Graph Generator</h5>
-		<p>A program I designed (or someone has designed before but I don't know) and implemented to generate random graphs with exactly the same degree for every vertex. Simply selecting random pairs of vertices isn't necessarily generating a graph with all vertices having the same degree. Recursively selecting a random pair of vertices with degree less than what we want (suppose it is D) will possibly generates several D-degree subgraphs and a complete subgraph, to which no edges can be added, with degree less than D. So, it still doesn't work. However, the algorithm below certainly will generate a degree-balanced graph, if such a graph exists for a given number of vertices and a given degree for each vertex. </p> 
+		<h5>A Regular Graph Generator</h5>
+		<p>A program I designed (or someone has designed before but I don't know) and implemented to generate random (I don't know if it is uniformly random) graphs with exactly the same degree for every vertex (i.e., regular graph). </p><p>Simply selecting random pairs of vertices isn't necessarily generating a graph with all vertices having the same degree. One common model called <em> pairing model</em> is to recursively select a random pair of vertices with degree less than what we want (suppose it is r), which will possibly generates either a multigraph, which is not simple, or a graph containing several r-regular subgraphs and several other complete subgraphs, which is not r-regular. However, the algorithm below certainly will generate a regular graph, if such a graph exists for a given number of vertices and a given degree for each vertex. </p> 
 		<pre class="pseudo">
 <strong>procedure</strong> gen (<em>D</em>, <em>V</em>) <%= cmt("D is the degree, V is number of vertices") %>
 	<strong>for</strong> <em>i</em> from <em>0</em> to <em>D</em> <strong>do</strong> <%= cmt("Create D + 1 empty sets, to store vertices with corresponding degree") %>
