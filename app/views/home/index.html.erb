@@ -62,6 +62,7 @@
 		<h3><%= @anchor_text.call('tools') %></h3>
 		Some tools I implemented which I think may be useful.
 		<h5>A Regular Graph Generator</h5>
+		<p>(This is part of the course project for CPSC 629 by <a href="http://faculty.cs.tamu.edu/chen/">Dr.Jianer Chen</a>)</p>
 		<p>A program I designed (or someone has designed before but I don't know) and implemented to generate random (I don't know if it is uniformly random) graphs with exactly the same degree for every vertex (i.e., regular graph). </p><p>Simply selecting random pairs of vertices isn't necessarily generating a graph with all vertices having the same degree. One common model called <em> pairing model</em> is to recursively select a random pair of vertices with degree less than what we want (suppose it is r), which will possibly generates either a multigraph, which is not simple, or a graph containing several r-regular subgraphs and several other complete subgraphs, which is not r-regular. However, the algorithm below certainly will generate a regular graph, if such a graph exists for a given number of vertices and a given degree for each vertex. </p> 
 		<pre class="pseudo">
 <strong>procedure</strong> gen (<em>D</em>, <em>V</em>) <%= cmt("D is the degree, V is number of vertices") %>
