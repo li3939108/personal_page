@@ -46,7 +46,7 @@ class HomeController < ApplicationController
 				:content => 
 				view_context.link_to(@heroku_site, @heroku_site+@top_nav_lists['home'][:href]) + view_context.tag('br') +
 				view_context.link_to(@people_tamu_addr, @people_tamu_addr) + " (Yeah, it redirects "+ view_context.link_to("here", @heroku_site+@top_nav_lists['home'][:href], {'title' => @heroku_site[7..-1]})+")"+view_context.tag('br')+
-				view_context.link_to(@office_ip, @office_ip+@top_nav_lists['home'][:href])+" (Located in 321 WEB, only available in TAMU campus network)",
+#				view_context.link_to(@office_ip, @office_ip+@top_nav_lists['home'][:href])+" (Located in 321 WEB, only available in TAMU campus network)",
 				:icon => 'fa-link',
 				:lines => 3,
 			},

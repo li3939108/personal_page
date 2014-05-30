@@ -47,4 +47,4 @@ gem "passenger"
 # gem 'debugger', group: [:development, :test]
 
 #gem 'syntax-highlighter-rails'
-
+gem 'newrelic_rpm'
