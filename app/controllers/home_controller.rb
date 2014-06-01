@@ -7,8 +7,8 @@ class HomeController < ApplicationController
 		@nju_site = "http://www.nju.edu.cn"
 		@office_ip = "http://165.91.215.96"
 		@people_tamu_addr = "http://people.tamu.edu/~li3939108"
-		@heroku_site = "http://chaof.herokuapp.com"
-		@name = "Li, Chaofan"
+		@heroku_site = "http://chaof.me"
+		@name = "Chaofan Li"
 		@top_nav_lists = 
 		{
 			'home' => {:text => "Home", :icon => "fa-home", :href => "#home"}, 
