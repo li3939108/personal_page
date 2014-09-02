@@ -54,6 +54,6 @@ PersonalPage::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  match "/ecen248" => "ecen248#show"
-  match "/hello" => proc { |env| [200, {}, "Hello Rack!"] }
+  match "/ecen248" => "ecen248#show", via: [:get, :post]
+  match "/hello" => proc { |env| [200, {}, "Hello Rack!"] }, via: [:get, :post]
 end
