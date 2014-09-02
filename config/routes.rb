@@ -8,7 +8,6 @@ PersonalPage::Application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  get 'ecen248/show' => 'ecen248#index'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
@@ -55,4 +54,6 @@ PersonalPage::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  match "/ecen248" => "ecen248#show"
+  match "/hello" => proc { |env| [200, {}, "Hello Rack!"] }
 end
