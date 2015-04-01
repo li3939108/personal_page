@@ -15,6 +15,7 @@ class HomeController < ApplicationController
 			'about' => {:text => "About Me", :icon => "fa-user", :href => "#about-me-panel"},
 			'contacts' => {:text => "Contacts", :icon => "fa-envelope", :href => "#contacts-panel"},
 			'tools' => {:text => "Tools", :icon => 'fa-wrench', :href => "#tools-panel"},
+			'publications' => {:text => "Publication", :icon => 'file-text', :href => "#publications-panel"},
 		}
 		@init_active = "Home"
 		@anchor_text = Proc.new{|key|
