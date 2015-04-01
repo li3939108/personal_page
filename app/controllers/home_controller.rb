@@ -24,7 +24,7 @@ class HomeController < ApplicationController
 					view_context.content_tag(:span, '&nbsp;&nbsp;'.html_safe, {'class' => 'anchor-icon octicon octicon-link'}), 
 					@top_nav_lists[key][:href], 
 					{'class' => 'anchor', 'title' =>'Permalink'}) + 
-				@top_nav_lists[key][:text], 
+				view_context.content_tag(:span, @top_nav_lists[key][:text], {'class' => 'para-title-text'}), 
 				{'class' => 'para-title'})
 		}
 		@email_gen = Proc.new{|before, after|
