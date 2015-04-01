@@ -47,16 +47,7 @@
 		<p>I am a Ph.D. student majoring <%= link_to("Computer Engineering", @cesg_site) %> at TAMU, advised by <a href="http://cesg.tamu.edu/faculty/Jiang-Hu/">Dr. Jiang Hu</a>. Before I came to TAMU, I received my B.S. degree in Electronic &amp; Information Science in 2013 from <%= content_tag(:em, link_to("Nanjing University", @nju_site) )  %>, at Nanjing, P.R.China.</p>
 	</div>
 	
-	<div class="container panel" id="<%= @top_nav_lists['contacts'][:href][1..-1] %>">
-		<h3><%= @anchor_text.call('contacts') %></h3>
-		<ul class="vertical">
-		<% @contacts.each do |list| %>
-			<li>
-				<span class="first-column" ><% case list[:name] when "Office"%><%= content_tag('span', '', {:class => "contact-icon icon-link #{list[:icon].split('-')[0]} #{list[:icon]}", :id => "map-button", :title => "#{list[:title]}"}) %><%	else %><%= content_tag('span', '', {:class => "contact-icon #{list[:icon].split('-')[0]} #{list[:icon]}"}) %><%end %>&nbsp;&nbsp;&nbsp;<%=  list[:name] %></span><span class="second-column" style="<%="height:"+(list[:lines]*18).to_s + "px;" if list[:lines] != nil %>"><%= list[:content] %></span>
-			</li>
-		<% end %>
-		</ul>
-	</div>
+
 	<div class="container panel" id="<%= @top_nav_lists['tools'][:href][1..-1] %>">
 		<h3><%= @anchor_text.call('tools') %></h3>
 		Some tools I implemented which I think may be useful.
@@ -119,6 +110,16 @@
 	<ol>
 	<li>Chaofan Li, Wei Luo, Sachin S. Sapatnekar and Jiang Hu. "Joint precision optimization and high level synthesis for approximate computing". <em>ACM/IEEE Design Automation Conference (DAC)</em>, 2015. (Accepted to appear)</li>
 	</ol>
+	</div>
+	<div class="container panel" id="<%= @top_nav_lists['contacts'][:href][1..-1] %>">
+		<h3><%= @anchor_text.call('contacts') %></h3>
+		<ul class="vertical">
+		<% @contacts.each do |list| %>
+			<li>
+				<span class="first-column" ><% case list[:name] when "Office"%><%= content_tag('span', '', {:class => "contact-icon icon-link #{list[:icon].split('-')[0]} #{list[:icon]}", :id => "map-button", :title => "#{list[:title]}"}) %><%	else %><%= content_tag('span', '', {:class => "contact-icon #{list[:icon].split('-')[0]} #{list[:icon]}"}) %><%end %>&nbsp;&nbsp;&nbsp;<%=  list[:name] %></span><span class="second-column" style="<%="height:"+(list[:lines]*18).to_s + "px;" if list[:lines] != nil %>"><%= list[:content] %></span>
+			</li>
+		<% end %>
+		</ul>
 	</div>
 	<div class="foot">
 		Last updated at <span class="last-modify"><%= @last_modify_date %></span> · <a class="text-link" href="https://github.com/li3939108/personal_page">Github project for this site</a><br />
