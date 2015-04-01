@@ -43,6 +43,9 @@ $link_color: #0084B4;
 div.paragraph{
 	margin:10px 24px ;
 }
+span.para-title-text{
+	color: $link_color ;
+}
 a.anchor{
 	display: inline-block ;
 	position:relative;
