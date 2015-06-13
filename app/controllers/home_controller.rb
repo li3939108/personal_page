@@ -12,8 +12,8 @@ class HomeController < ApplicationController
 		@top_nav_lists = 
 		{
 			'home' => {:text => "Home", :icon => "fa-home", :href => "#home"}, 
-			'about' => {:text => "About Me", :icon => "fa-user", :href => "#about-me-panel"},
-			'tools' => {:text => "Tools", :icon => 'fa-wrench', :href => "#tools-panel"},
+			'about' => {:text => "Bio", :icon => "fa-user", :href => "#about-me-panel"},
+			'tools' => {:text => "Misc", :icon => 'fa-wrench', :href => "#tools-panel"},
 			'publications' => {:text => "Publication", :icon => 'fa-file-text', :href => "#publications-panel"},
 			'contacts' => {:text => "Contacts", :icon => "fa-envelope", :href => "#contacts-panel"},
 		}
