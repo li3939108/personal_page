@@ -5,6 +5,7 @@ class HomeController < ApplicationController
 		@tamu_site = "http://www.tamu.edu"
 		@ece_site = "http://engineering.tamu.edu/electrical"
 		@nju_site = "http://www.nju.edu.cn"
+		@ese_nju_site = "http://ese.nju.edu.cn" 
 		@office_ip = "http://165.91.215.253"
 		@people_tamu_addr = "http://people.tamu.edu/~li3939108"
 		@heroku_site = "http://chaofan.li"
