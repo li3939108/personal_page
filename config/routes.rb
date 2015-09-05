@@ -55,4 +55,5 @@ PersonalPage::Application.routes.draw do
   #     resources :products
   #   end
   match "/ecen248" => "ecen248#show", via: [:get, :post]
+  match "/ecen468" => "ecen468#show", via: [:get, :post]
 end
