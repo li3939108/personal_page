@@ -1,5 +1,5 @@
 PersonalPage::Application.routes.draw do
-  get "home/index"
+#  get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -56,4 +56,7 @@ PersonalPage::Application.routes.draw do
   #   end
   match "/ecen248" => "ecen248#show", via: [:get, :post]
   match "/ecen468" => "ecen468#show", via: [:get, :post]
+  match "/grade" => "grade#index", via: [:get, :post]
+  match "/grade/search" => "grade#search", via: [:get, :post]
+  match "/search" => "grade#search", via: [:get, :post]
 end
