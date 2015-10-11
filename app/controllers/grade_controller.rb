@@ -14,6 +14,8 @@ class GradeController < ApplicationController
 				grade.update(score: params[:v] )
 			end
 			@out = 'Saved'
+			@student = Student.find( params[:q].to_i )
+			@grades = @student.grades.all
 		elsif params[:commit] == 'Delete'
 			grade = Grade.find_by(student_id: uin, course: params[:c], name: params[:n] ) 
 			if grade == nil
@@ -22,10 +24,16 @@ class GradeController < ApplicationController
 				grade.destroy 
 				@out = 'Deleted'
 			end
+			@student = Student.find( params[:q].to_i )
+			@grades = @student.grades.all
+		elsif params[:commit] == 'Search'
+			@student = Student.find( params[:q].to_i )
+			@grades = @student.grades.all.select do |g| 
+				(params[:c] == '' or g.course == params[:c]) and 
+				(params[:n] == '' or g.name == params[:n] )
+			end
 		else 
 			@out = nil 
 		end
-		@student = Student.find( params[:q].to_i )
-		@grades = @student.grades.all
 	end
 end
