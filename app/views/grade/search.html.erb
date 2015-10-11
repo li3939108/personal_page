@@ -1,6 +1,12 @@
 <div>
+<p style="color: red;"><%= @out %></p>
 <p>
 	Name: <%= @student.last %>, <%= @student.first %></br>
-	UIN: <%= @student.uin %>
+	UIN: <%= @student.uin %> </br>
+	Grades: 
+	<table><% @grades.each do |g| %>
+		<tr><td><%= g.course %></td> <td> <%= g.name %></td> <td> <%= g.score %></td></tr>
+	<% end %>
+	</table>
 </p>
 </div>
