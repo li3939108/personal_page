@@ -57,6 +57,7 @@ PersonalPage::Application.routes.draw do
   match "/ecen248" => "ecen248#show", via: [:get, :post]
   match "/ecen468" => "ecen468#show", via: [:get, :post]
   match "/grade" => "grade#index", via: [:get, :post]
-  match "/grade/search" => "grade#search", via: [:get, :post]
   match "/search" => "grade#search", via: [:get, :post]
+  match "/grade/:course/:name" => "grade#index", via: [:get, :post]
+  match "/change" => "grade#search", via: [:get, :post] 
 end
