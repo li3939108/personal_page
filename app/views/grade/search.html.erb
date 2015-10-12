@@ -8,7 +8,9 @@
 	Level: <%= @student.classcode %></br>
 	Grades: 
 	<table><% @grades.each do |g| %>
-		<tr><td><%= g.course %></td> <td> <%= g.name %></td> <td> <%= g.score %></td></tr>
+		<tr><td><%= g.course %></td>
+		<td> <%= g.name %></td>
+		<td> <%= g.score %></td></tr>
 	<% end %>
 	</table>
 </p>
