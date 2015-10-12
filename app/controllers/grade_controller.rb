@@ -4,36 +4,43 @@ class GradeController < ApplicationController
 		@course = params[:course]
 	end
 	def search
-		uin = params[:q].to_i
-		if params[:c] == 'ECEN468' or params[:c] == 'ECEN248' and params[:commit] == 'Update'
-			grade = Grade.find_by(student_id: uin, course: params[:c], name: params[:n] ) 
+		uin = params[:q].strip!.to_i
+		course = params[:c].strip!
+		name = params[:n].strip!
+		commit = params[:commit].strip!
+		score = params[:v].strip!
+		if course == 'ECEN468' or course == 'ECEN248' and commit == 'Update'
+			grade = Grade.find_by(student_id: uin, course: course, name: name ) 
 			
 			if grade == nil and uin >= 100000000 and uin <= 999999999 
-				Grade.create(student_id: uin, course: params[:c], name: params[:n] , score: params[:v])
+				Grade.create(student_id: uin, course: course, name: name , score: score)
 			else
-				grade.update(score: params[:v] )
+				grade.update(score: score )
 			end
 			@out = 'Saved'
-			@student = Student.find( params[:q].to_i )
+			@student = Student.find( uin )
 			@grades = @student.grades.all
-		elsif params[:commit] == 'Delete'
-			grade = Grade.find_by(student_id: uin, course: params[:c], name: params[:n] ) 
+		elsif commit == 'Delete'
+			grade = Grade.find_by(student_id: uin, course: course, name: name ) 
 			if grade == nil
 				@out = 'No record, nothing deleted'
 			else
 				grade.destroy 
 				@out = 'Deleted'
 			end
-			@student = Student.find( params[:q].to_i )
+			@student = Student.find( uin )
 			@grades = @student.grades.all
-		elsif params[:commit] == 'Search'
-			@student = Student.find( params[:q].to_i )
+		elsif commit == 'Search'
+			@student = Student.find( uin )
 			@grades = @student.grades.all.select do |g| 
-				(params[:c] == '' or g.course == params[:c]) and 
-				(params[:n] == '' or g.name == params[:n] )
+				(course == '' or g.course == course) and 
+				(name == '' or g.name == name )
 			end
+			@out = "#{pluralize(@grades.length, 'record') } found"
 		else 
-			@out = nil 
+			@out = 'No operation'
+			@student = Student.find( uin )
+			@grades = @student.grades.all
 		end
 	end
 end
