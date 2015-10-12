@@ -36,7 +36,7 @@ class GradeController < ApplicationController
 				(course == '' or g.course == course) and 
 				(name == '' or g.name == name )
 			end
-			@out = "#{pluralize(@grades.length, 'record') } found"
+			@out = "#{view_context.pluralize(@grades.length, 'record') } found"
 		else 
 			@out = 'No operation'
 			@student = Student.find( uin )
