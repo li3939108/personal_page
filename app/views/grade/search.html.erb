@@ -3,6 +3,9 @@
 <p>
 	Name: <%= @student.last %>, <%= @student.first %></br>
 	UIN: <%= @student.uin %> </br>
+	Email: <%= @student.email %> </br>
+	Major: <%= @student.major %> </br>
+	Level: <%= @student.classcode %></br>
 	Grades: 
 	<table><% @grades.each do |g| %>
 		<tr><td><%= g.course %></td> <td> <%= g.name %></td> <td> <%= g.score %></td></tr>
