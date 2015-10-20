@@ -9,6 +9,7 @@ class HomeController < ApplicationController
 		@office_ip = "http://165.91.215.253"
 		@people_tamu_addr = "http://people.tamu.edu/~li3939108"
 		@heroku_site = "http://chaofan.li"
+		@resume = @people_tamu_addr + "/resume.pdf"
 		@name = "Chaofan Li"
 		@top_nav_lists = 
 		{
