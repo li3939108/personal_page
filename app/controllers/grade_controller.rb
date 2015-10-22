@@ -5,10 +5,10 @@ class GradeController < ApplicationController
 	end
 	def search
 		uin = params[:q].strip.to_i
-		course = params[:c].strip
-		name = params[:n].strip
+		course = params[:c].strip if params[:c] != nil
+		name = params[:n].strip if params[:n] != nil
 		commit = params[:commit].strip
-		score = params[:v].strip
+		score = params[:v].strip if params[:v] != nil
 		if course == 'ECEN468' or course == 'ECEN248' and commit == 'Update'
 			grade = Grade.find_by(student_id: uin, course: course, name: name ) 
 			
