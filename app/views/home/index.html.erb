@@ -4,12 +4,14 @@
 			<div class="topbar-left" style="display: inline-block">
 				<ul class="nav">
 					<% @top_nav_lists.values.each do |list| %>
+					<% if list[:text] != 'Home' %>
 					<li class="top-list top-list-<%= list[:href][1..-1] %> <%= "active" if list[:text] == @init_active %>">
 						<a class="top-nav top-nav-left" href="<%= list[:href] %>">
 							<span class="icon icon-left <%= list[:icon].split('-')[0] %> <%= list[:icon] %>"></span>
 							<span class="text"><%= list[:text] %></span>
 						</a>
 					</li>
+					<% end %>
 					<% end %>
 				</ul>
 			</div>
