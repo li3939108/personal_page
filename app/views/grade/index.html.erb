@@ -1,10 +1,17 @@
 <div >
-<h1>
-Hello
-</h1>
 <%= form_tag("/search", method: "get") do %>
-  <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
+<table>
+<tr><td><%= label_tag(:q, "UIN:") %></td>
+<td><%= text_field_tag(:q) %></td></tr>
+<tr><td><%= label_tag(:v, "Score:") %></td>
+  <td><%= text_field_tag(:v) %></td></tr>
+<tr><td><%= label_tag(:course, 'Course') %></td>
+  <td><%= text_field_tag(:c, @course) %></td></tr>
+<tr><td><%= label_tag(:name, 'Name') %></td>
+  <td><%= text_field_tag(:n, @name) %></td></tr>
+</table>
+  <%= submit_tag("Search") %>
+  <%= submit_tag("Update") %>
+  <%= submit_tag("Delete") %>
 <% end %>
 </div>
