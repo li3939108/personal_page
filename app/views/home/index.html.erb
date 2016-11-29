@@ -48,10 +48,10 @@
 	<div class="container panel" id="<%= @top_nav_lists['about'][:href][1..-1] %>">
 		<h3><%= @anchor_text.call('about') %></h3>
 		<p>I am a Ph.D. student majoring <%= link_to("Computer Engineering", @cesg_site) %> at TAMU, advised by Prof. <a href="http://cesg.tamu.edu/faculty/Jiang-Hu/">Jiang Hu</a>. Before I came to TAMU, I received my B.S. degree in Electronic &amp; Information Science in 2013 from <%= content_tag(:em, link_to("School of Electronic Science and Engineering", @ese_nju_site) ) %>, <%= content_tag(:em, link_to("Nanjing University", @nju_site) )  %>, at Nanjing, China. Here is my <%= link_to("resume", @resume, style: "border-bottom: dotted 1px #a5a5a5 ;" )%>.</p>
-		<p>My research focuses on Computer-Aided Design (CAD) for Integrated Circuits (IC), which is mainly about designing algorithms to solve challenges emerging from the field of IC design. With that being said, I am more interested in positions on software design, especially positions involving system-level software, although I am also interested in hardware design.</p>
+<!--		<p>My research focuses on Computer-Aided Design (CAD) for Integrated Circuits (IC), which is mainly about designing algorithms to solve challenges emerging from the field of IC design. With that being said, I am more interested in positions on software design, especially positions involving system-level software, although I am also interested in hardware design.</p>
 		<p>Since my research is more on solving new problems than improving existing methods for some problem, I also have strong capability in modeling or transforming engineering problems to mathematical / statistical / algorithmic problems. I have published one paper as first author at DAC, which is a top conference in the EDA field. The main contributions are just a novel statistical error model for approximate computing, and related algorithms based on the model.</p>
 		<p>Currently, I am particularly interested in statistics, which in combination with computer science has spawned many new ideas/methods in fields such as machine learning ( where "statistical learning plays a dominating role" ) and data science. I believe algorithms backed up with theory of statistics, and implemented in machines will be a powerful tool.</p>
-	
+-->	
 	</div>
 	
 
@@ -59,6 +59,7 @@
 	<h3><%= @anchor_text.call('publications') %></h3>
 	<ol class="publication-list">
 	<li>Chaofan Li, Wei Luo, Sachin S. Sapatnekar and Jiang Hu. "<%= link_to('Joint precision optimization and high level synthesis for approximate computing', "http://people.tamu.edu/~li3939108/LiDAC15a.pdf", {'class' => 'content-link file-link'}) %>". <em>ACM/IEEE Design Automation Conference (DAC)</em>, June 2015. [<%= link_to('slides', 'http://people.tamu.edu/~li3939108/LiDAC15a_slides.pdf', {'class' => 'content-link file-link'}) %>] </li>
+	<li>Chaofan Li, Sachin S. Sapatnekar and Jiang Hu. "<%= link_to('Control Synthesis and Delay Sensor Deployment for Efficient ASV Designs', "http://people.tamu.edu/~li3939108/LiICCAD16.pdf", {'class' => 'content-link file-link'}) %>". <em>International Conference on Computer-Aided Design (ICCAD)</em>, Nov 2016. [<%= link_to('slides', 'http://people.tamu.edu/~li3939108/LiICCAD16_slides.pdf', {'class' => 'content-link file-link'}) %>] </li>
 	</ol>
 	</div>
 	<div class="container panel" id="<%= @top_nav_lists['tools'][:href][1..-1] %>">
