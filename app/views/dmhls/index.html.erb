@@ -1,3 +1,24 @@
-<div>
-Direct-Mapping High-Level Synthesis (DMHLS) is an novel framework for High Level Synthesis.
+<div style="width: 500px;">
+<h1 style=" font-weight: bold;">
+DM-HLS
+</h1>
+<p>
+<em "font-weight: bold;">Direct-Mapping High-Level Synthesis</em> (DMHLS) 
+is an novel framework for <em>High Level Synthesis</em>, 
+which is extremly fast, aiming to be competitive with software compiler for microprocessors. 
+DMHLS starts from LLVM Intermediate Representations (LLVM IR) and generate Verilog HDL codes. 
+LLVM IR is a typical Static-Single Assignment (SSA) form of intermediate representation.
+Although DMHLS only supports LLVM IR currently, the techniques underneath the framework should 
+works fine for any SSA form of intermediate representations</p>
+<p >
+<em>High Level Synthesis</em> (HLS) has been a research topic for some three decades. Since late 1980s, 
+there has been continuous effort to automating the process of RTL design by generating the 
+HDL code such as Verilog HDL and VHDL automatically. Previously, HLS focused on how to optimize the 
+resource usage and/or the delay for the whole work, and tread it as an optimization problem. 
+Thus, some mathematical optimization models were proposed to solve the HLS problem. The earliest one of
+these models might be the <em>Integer Linear Programming</em> (ILP) model, which is able to get the 
+optimal solution subject to delay constraints or resource constraints. However, the ILP model is very slow
+to get solution. SDC (System of Difference Constraints) is another model used to solve this optimization
+problem, which is faster than ILP model, but still much slower than the software compiler.
+</p>
 </div>
