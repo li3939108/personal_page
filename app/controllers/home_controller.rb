@@ -13,11 +13,26 @@ class HomeController < ApplicationController
 		@name = "Chaofan Li"
 		@top_nav_lists = 
 		{
-			'home' => {:text => "Home", :icon => "fa-home", :href => "#home"}, 
-			'about' => {:text => "Bio", :icon => "fa-user", :href => "#about-me-panel"},
-			'publications' => {:text => "Publication", :icon => 'fa-file-text', :href => "#publications-panel"},
-			'contacts' => {:text => "Contacts", :icon => "fa-envelope", :href => "#contacts-panel"},
-			'tools' => {:text => "Misc", :icon => 'fa-wrench', :href => "#tools-panel"},
+			'home' => {
+				:text => "Home", 
+				:icon => "fa-home", 
+				:href => "#home"}, 
+			'about' => {
+				:text => "Bio", 
+				:icon => "fa-user", 
+				:href => "#about-me-panel"},
+			'publications' => {
+				:text => "Publication", 
+				:icon => 'fa-file-text', 
+				:href => "#publications-panel"},
+			'contacts' => {
+				:text => "Contacts", 
+				:icon => "fa-envelope", 
+				:href => "#contacts-panel"},
+			'tools' => {
+				:text => "Research",
+				:icon => 'fa-caret-square-o-down', 
+				:href => "#tools-panel"},
 		}
 		@init_active = "Home"
 		@anchor_text = Proc.new{|key|

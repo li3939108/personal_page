@@ -48,3 +48,5 @@ gem "passenger"
 
 #gem 'syntax-highlighter-rails'
 gem 'newrelic_rpm'
+gem 'font-awesome-sass'
+

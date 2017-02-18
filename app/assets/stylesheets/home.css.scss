@@ -1,9 +1,50 @@
 /// Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+//
 
 $contacts-first-column : 20% ;
 $link_color: #0084B4;
+
+
+
+.dropdown-content {
+	float: none;
+    display: none;
+    position: absolute;
+	margin-right: 0px;
+	padding-right:0px;
+	text-align: right;
+	top: 46px;
+	width: 111px;
+    z-index: 2;
+	font: inherit ;
+	-webkit-transition:height 700ms;
+	-moz-transition:height 700ms;
+	opacity: 1;
+}
+
+
+.dropdown-content > li:hover {
+    text-decoration: none;
+    color: black;
+	background: rgba(0, 132, 180, .1);
+}
+.dropdown-content > li {
+	padding: 10px 20px 14px 38px;
+	background: $link_color ;
+	
+}
+.dropdown-content > li > a {
+	color: white;
+	border-bottom: none;
+}
+.dropdown-content > li:hover > a {
+	color: $link_color ;
+}
+.research:hover > .dropdown-content {
+    display: block;
+}
 
 
 .topbar{
@@ -12,7 +53,7 @@ $link_color: #0084B4;
 	top: 0;
 	right: 0;
 	left: 0;
-	z-index: 1000;	
+	z-index: 1;	
 	height: 46px;
 	background: white;
 }
