@@ -1,17 +1,12 @@
 <%= stylesheet_link_tag "dmhls" %>
 <div style="margin-left: 30px ;width: 500px;" >
 <h1 style=" font-weight: bold;">
-DM-HLS
+DMHLS
 </h1>
+<h4>
+Direct-Mapping High-Level Synthesis
+</h4>
 <hr/>
-<p>
-<em "font-weight: bold;">Direct-Mapping High-Level Synthesis</em> (DMHLS) 
-is an novel framework for <em>High Level Synthesis</em>, 
-which is extremly fast, aiming to be competitive with software compiler for microprocessors. 
-DMHLS starts from LLVM Intermediate Representations (LLVM IR) and generate Verilog HDL codes. 
-LLVM IR is a typical Static-Single Assignment (SSA) form of intermediate representation.
-Although DMHLS only supports LLVM IR currently, the techniques underneath the framework should 
-works fine for any SSA form of intermediate representations</p>
 <p >
 <em>High Level Synthesis</em> (HLS) has been a research topic for some three decades. Since late 1980s, 
 there has been continuous effort for automating the process of RTL design by generating the 
@@ -25,6 +20,17 @@ to get solution. <a href="http://cadlab.cs.ucla.edu/~cong/papers/28.1-cong.pdf">
 is another model used to solve this optimization problem, 
 which is faster than ILP model, but still much slower than the software compiler.
 </p>
+<p>
+<em "font-weight: bold;">Direct-Mapping High-Level Synthesis</em> (DMHLS) 
+is an novel framework for <em>High Level Synthesis</em>, 
+which is extremly fast, aiming to be competitive with software compiler for microprocessors. 
+DMHLS starts from <a href="http://llvm.org/">LLVM </a>Intermediate Representations (LLVM IR) 
+and generate Verilog HDL codes. LLVM IR is a typical 
+<a href="https://en.wikipedia.org/wiki/Static_single_assignment_form">Static-Single Assignment (SSA)</a>
+form of intermediate representation. Although DMHLS only supports LLVM IR currently, 
+the techniques underneath the framework should 
+works fine for any SSA form of intermediate representations</p>
+
 <hr/>
 <p>
 <a href="https://github.com/li3939108/dmhls/archive/master.zip">Download</a><br/>
