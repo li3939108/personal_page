@@ -6,12 +6,12 @@
 				<ul class="nav">
 					<% @top_nav_lists.values.each do |list| %>
 					<% if list[:text] != 'Home' %>
-					<li class="top-list top-list-<%= list[:href][1..-1] %> <%= "active" if list[:text] == @init_active %> <%= "research" if list[:text] == 'Research' %>">
+					<li class="top-list top-list-<%= list[:href][1..-1] %> <%= "active" if list[:text] == @init_active %> <%= "research" if list[:text] == 'Projects' %>">
 						<a class="top-nav top-nav-left" href="<%= list[:href] %>">
 							<span class="icon icon-left <%= list[:icon].split('-')[0] %> <%= list[:icon] %>"></span>
 							<span class="text"><%= list[:text] %></span>
 						</a>
-						<% if list[:text] == 'Research' %>
+						<% if list[:text] == 'Projects' %>
 							<ul class="dropdown-content">
 							<li><a href="https://github.com/li3939108/dmhls">DM-HLS</a></li>
 							</ul>

@@ -30,7 +30,7 @@ class HomeController < ApplicationController
 				:icon => "fa-envelope", 
 				:href => "#contacts-panel"},
 			'tools' => {
-				:text => "Research",
+				:text => "Projects",
 				:icon => 'fa-caret-square-o-down', 
 				:href => "#tools-panel"},
 		}
