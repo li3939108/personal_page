@@ -11,9 +11,18 @@ $ ->
       $("#location-map").remove()
       $('#map-button').removeClass('icon-as-hover')
       $('#map-button').attr('title', 'View location on Google Map')
-  $('.top-list').click ->
+  $('.top-list-about-me-panel').click ->
     $('.top-list').removeClass('active')      
     $(this).addClass('active')
+  $('.top-list-publications-panel').click ->
+    $('.top-list').removeClass('active')      
+    $(this).addClass('active')
+  $('.top-list-contacts-panel').click ->
+    $('.top-list').removeClass('active')      
+    $(this).addClass('active')
+  $('.projects').click ->
+    $('.top-list').removeClass('active')      
+    $('.dropdown-content').toggle()
   $('.top-nav-left').click ->
     $('#home').height( $($(this).attr('href')).offset().top + $(window).height() - parseInt($('#home').css('padding-top'), 10) )
   $('.para-title').hover( 

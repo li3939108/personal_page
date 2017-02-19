@@ -32,7 +32,17 @@ class HomeController < ApplicationController
 			'tools' => {
 				:text => "Projects",
 				:icon => 'fa-caret-square-o-down', 
-				:href => "#tools-panel"},
+				:href => "#projects"},
+		}
+		@projects = {
+			'dmhls' => {
+				:text => "DMHLS",
+				:link => "https://github.com/li3939108/dmhls",
+			},
+			'klp'=>{
+				:text => "KL-Part",
+				:link => "/klp",
+			},
 		}
 		@init_active = "Home"
 		@anchor_text = Proc.new{|key|

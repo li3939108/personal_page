@@ -61,4 +61,5 @@ PersonalPage::Application.routes.draw do
   match "/grade/:course/:name" => "grade#index", via: [:get, :post]
   match "/change" => "grade#search", via: [:get, :post] 
   match "/dmhls" => "dmhls#index", via: [:get, :post] 
+  match "/klp" => "klp#index", via: [:get, :post] 
 end

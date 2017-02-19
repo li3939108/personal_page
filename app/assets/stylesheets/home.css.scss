@@ -32,27 +32,28 @@ body{
 	-webkit-transition:height 700ms;
 	-moz-transition:height 700ms;
 	opacity: 1;
+	box-shadow: 0 4px 8px #e5e5e5 ;
 }
 
 
 .dropdown-content > li:hover {
     text-decoration: none;
-    color: black;
-	background: rgba(0, 132, 180, .1);
+	background: rgba(0, 132, 180, 1);
 }
 .dropdown-content > li {
-	padding: 10px 20px 14px 22px;
-	background: $link_color ;
+	text-align: right;
+	padding: 5px 20px 5px 0px;
+	background: rgba(255, 255, 255, 1) ;
 	
 }
 .dropdown-content > li > a {
-	color: white;
+	color: $link_color ;
 	border-bottom: none;
 }
 .dropdown-content > li:hover > a {
-	color: $link_color ;
+	color: white;
 }
-.research:hover > .dropdown-content {
+.projects:hover > .dropdown-content {
     display: block;
 }
 
