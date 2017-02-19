@@ -20,8 +20,6 @@ $ ->
   $('.top-list-contacts-panel').click ->
     $('.top-list').removeClass('active')      
     $(this).addClass('active')
-  $('.projects').hover ->
-    $('.dropdown-content').show()
   $('.projects').click ->
     $('.top-list').removeClass('active')      
     $('.dropdown-content').css('display', 'block' )  
