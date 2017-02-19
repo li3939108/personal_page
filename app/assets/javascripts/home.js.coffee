@@ -20,9 +20,14 @@ $ ->
   $('.top-list-contacts-panel').click ->
     $('.top-list').removeClass('active')      
     $(this).addClass('active')
+  $('.projects').hover ->
+    $('.dropdown-content').show()
   $('.projects').click ->
     $('.top-list').removeClass('active')      
-    $('.dropdown-content').toggle()
+    $('.dropdown-content').css('display', 'block' )  
+  $('body').click (e) ->
+    if (not $(e.target).is('.dropdown-content') ) and (not $(e.target).parents().is('.dropdown-content')) and (not $(e.target).is('.projects') ) and (not $(e.target).parents().is('.projects') )
+      $('.dropdown-content').css('display', 'none')
   $('.top-nav-left').click ->
     $('#home').height( $($(this).attr('href')).offset().top + $(window).height() - parseInt($('#home').css('padding-top'), 10) )
   $('.para-title').hover( 
