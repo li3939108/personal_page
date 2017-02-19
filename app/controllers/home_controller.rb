@@ -37,7 +37,7 @@ class HomeController < ApplicationController
 		@projects = {
 			'dmhls' => {
 				:text => "DMHLS",
-				:link => "https://github.com/li3939108/dmhls",
+				:link => "/dmhls",
 			},
 			'klp'=>{
 				:text => "KL-Part",
