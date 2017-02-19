@@ -39,10 +39,10 @@ class HomeController < ApplicationController
 				:text => "DMHLS",
 				:link => "/dmhls",
 			},
-			'klp'=>{
-				:text => "KL-Part",
-				:link => "/klp",
-			},
+#			'klp'=>{
+#				:text => "KL-Part",
+#				:link => "/klp",
+#			},
 		}
 		@init_active = "Home"
 		@anchor_text = Proc.new{|key|
