@@ -27,7 +27,7 @@ ul.dropdown-content {
   padding-left: 0px;
   text-align: right;
   top: 45px;
-  width: auto;
+
   z-index: 2;
   font: inherit;
   transition: height 700ms;
@@ -41,8 +41,8 @@ ul.dropdown-content {
 }
 
 .dropdown-content > li {
-  text-align: right;
-  padding: 5px 15px 5px 24px;
+  text-align: left;
+  padding: 5px 15px 5px 37px;
   //background: rgba(255, 255, 255, 1) ;
   background: transparent;
 
@@ -139,7 +139,7 @@ ul {
   text-align: left;
 }
 
-.nav > li {
+.nav  li {
   //color: #66757f;
   color: rgba(255, 255, 255, .75);
 }
@@ -223,7 +223,7 @@ li.top-list {
   float: left;
 }
 
-li.top-list:hover > a {
+li.top-list:hover  a {
   //height: 42px ;
   height: 46px;
   //color: $link_color ;

@@ -7,17 +7,17 @@
           <% @top_nav_lists.values.each do |list| %>
               <% if list[:text] != 'Home' %>
                   <li class="top-list top-list-<%= list[:href][1..-1] %> <%= "active" if list[:text] == @init_active %> <%= "dropdown" if list[:dropdown] %>">
-                    <a class="top-nav top-nav-left" href="<%= list[:href] %>">
+                      <a class="top-nav top-nav-left" href="<%= list[:href] %>">
                       <span class="icon icon-left <%= list[:icon].split('-')[0] %> <%= list[:icon] %>"></span>
                       <span class="text"><%= list[:text] %></span>
                     </a>
-                    <% if list[:dropdown]  %>
-                        <ul class="dropdown-content dc-<%= list[:text] %>">
-                          <% list[:dropdown_content].values.each do |li| %>
-                              <li><a href=<%= li[:link] %>><%= li[:text] %></a></li>
-                          <% end %>
-                        </ul>
-                    <% end %>
+                      <% if list[:dropdown] %>
+                          <ul class="dropdown-content dc-<%= list[:text] %>">
+                            <% list[:dropdown_content].values.each do |li| %>
+                                <li><a href=<%= li[:link] %>><%= li[:text] %></a></li>
+                            <% end %>
+                          </ul>
+                      <% end %>
                   </li>
               <% end %>
           <% end %>
