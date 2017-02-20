@@ -53,6 +53,10 @@ class HomeController < ApplicationController
 				:text => "DMHLS",
 				:link => "/dmhls",
 			},
+			'rilp' => {
+				:text => "RubyILP",
+				:link => "https://github.com/li3939108/ilpext",
+			},
 #			'klp'=>{
 #				:text => "KL-Part",
 #				:link => "/klp",
