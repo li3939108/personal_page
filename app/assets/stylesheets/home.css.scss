@@ -22,12 +22,9 @@ ul.dropdown-content {
   display: none;
   float: none;
   position: absolute;
-  margin-right: 0px;
-  padding-right: 0px;
-  padding-left: 0px;
-  text-align: right;
+  margin: 0px 0px 0px 10px;
+  padding: 0px 0px 0px 0px ;
   top: 45px;
-
   z-index: 2;
   font: inherit;
   transition: height 700ms;
@@ -42,7 +39,7 @@ ul.dropdown-content {
 
 .dropdown-content > li {
   text-align: left;
-  padding: 5px 15px 5px 37px;
+  padding: 5px 15px 5px 27px;
   //background: rgba(255, 255, 255, 1) ;
   background: transparent;
 
