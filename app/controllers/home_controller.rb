@@ -25,18 +25,18 @@ class HomeController < ApplicationController
 				:text => "Publication", 
 				:icon => 'fa-file-text', 
 				:href => "#publications-panel"},
+			'tools' => {
+				:text => "Projects",
+				:icon => 'fa-caret-square-o-down', 
+				:href => "#projects"},
+			'teaching' => {
+				:text => "Teaching",
+				:icon => 'fa-caret-square-o-down',
+				:href => '#teaching'},
 			'contacts' => {
 				:text => "Contacts", 
 				:icon => "fa-envelope", 
 				:href => "#contacts-panel"},
-			'tools' => {
-				:text => "Projects",
-				:icon => 'fa-caret-down', 
-				:href => "#projects"},
-			'teaching' => {
-				:text => "Teaching",
-				:icon => 'fa-caret-down',
-				:href => '#teaching'},
 		}
 		@teaching = {
 			'ECEN 468' => {
