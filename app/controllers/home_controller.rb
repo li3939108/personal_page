@@ -53,6 +53,10 @@ class HomeController < ApplicationController
 				:text => "DMHLS",
 				:link => "/dmhls",
 			},
+			'rilp' => {
+				:text => "RubyILP",
+				:link => "https://github.com/li3939108/ilpext",
+			},
 #			'klp'=>{
 #				:text => "KL-Part",
 #				:link => "/klp",
@@ -62,7 +66,7 @@ class HomeController < ApplicationController
 		@anchor_text = Proc.new{|key|
 			view_context.content_tag(:span, 
 				view_context.link_to(
-					view_context.content_tag(:span, '&nbsp;&nbsp;'.html_safe, {'class' => 'anchor-icon octicon octicon-link'}), 
+					view_context.content_tag(:span, '&nbsp;&nbsp;'.html_safe, {'class' => 'anchor-icon fa-link'}),
 					@top_nav_lists[key][:href], 
 					{'class' => 'anchor', 'title' =>'Permalink'}) + 
 				view_context.content_tag(:span, @top_nav_lists[key][:text], {'class' => 'para-title-text'}), 
