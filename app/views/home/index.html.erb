@@ -6,14 +6,20 @@
 				<ul class="nav">
 					<% @top_nav_lists.values.each do |list| %>
 					<% if list[:text] != 'Home' %>
-					<li class="top-list top-list-<%= list[:href][1..-1] %> <%= "active" if list[:text] == @init_active %> <%= "projects" if list[:text] == 'Projects' %>">
+					<li class="top-list top-list-<%= list[:href][1..-1] %> <%= "active" if list[:text] == @init_active %> <%= "dropdown" if list[:text] == 'Projects' or list[:text] == "Teaching"%>">
 						<a class="top-nav top-nav-left" href="<%= list[:href] %>">
 							<span class="icon icon-left <%= list[:icon].split('-')[0] %> <%= list[:icon] %>"></span>
 							<span class="text"><%= list[:text] %></span>
 						</a>
 						<% if list[:text] == 'Projects' %>
-							<ul class="dropdown-content">
+							<ul class="dropdown-content dc-Projects">
 							<% @projects.values.each do |li| %>
+							<li><a href=<%= li[:link] %> ><%= li[:text] %></a></li>
+							<% end %>
+							</ul>
+						<% elsif list[:text] == 'Teaching' %>
+							<ul class="dropdown-content dc-Teaching" >
+							<% @teaching.values.each do |li| %>
 							<li><a href=<%= li[:link] %> ><%= li[:text] %></a></li>
 							<% end %>
 							</ul>

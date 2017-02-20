@@ -31,8 +31,22 @@ class HomeController < ApplicationController
 				:href => "#contacts-panel"},
 			'tools' => {
 				:text => "Projects",
-				:icon => 'fa-caret-square-o-down', 
+				:icon => 'fa-caret-down', 
 				:href => "#projects"},
+			'teaching' => {
+				:text => "Teaching",
+				:icon => 'fa-caret-down',
+				:href => '#teaching'},
+		}
+		@teaching = {
+			'ECEN 468' => {
+				:text => "ECEN 468",
+				:link => "http://people.tamu.edu/~li3939108/ecen468",
+			},
+			'ECEN 248' => {
+				:text => "ECEN 248",
+				:link => "http://people.tamu.edu/~li3939108/ecen248",
+			},
 		}
 		@projects = {
 			'dmhls' => {
