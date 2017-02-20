@@ -25,29 +25,32 @@ body{
 	margin-right: 0px;
 	padding-right:0px;
 	text-align: right;
-	top: 46px;
+	top: 45px;
 	width: 102px;
     z-index: 2;
 	font: inherit ;
-	-webkit-transition:height 700ms;
-	-moz-transition:height 700ms;
+	transition:height 700ms;
 	opacity: 1;
 	box-shadow: 0 4px 8px #e5e5e5 ;
+	background: black;
 }
 
 
 .dropdown-content > li:hover {
     text-decoration: none;
-	background: rgba(0, 132, 180, 1);
+	//background: rgba(0, 132, 180, .5);
 }
 .dropdown-content > li {
 	text-align: right;
 	padding: 5px 20px 5px 0px;
-	background: rgba(255, 255, 255, 1) ;
+	//background: rgba(255, 255, 255, 1) ;
+	background: inherit ;
 	
 }
 .dropdown-content > li > a {
-	color: $link_color ;
+	//color: $link_color ;
+	//color: rgba(50,50,50, 1);
+	color: rgba(255,255,255,.75);
 	border-bottom: none;
 }
 .dropdown-content > li:hover > a {
@@ -66,7 +69,7 @@ body{
 	left: 0;
 	z-index: 1;	
 	height: 46px;
-	background: white;
+	background: black;
 }
 .global-nav{
 	border-bottom: 1px solid rgba(0,0,0,0.15);
@@ -77,14 +80,14 @@ body{
 	box-shadow: 0 4px 6px #e5e5e5 ;
 }
 .container{
-	max-width: 1000px;
+	max-width: 750px;
 	text-align: center;
 	width: auto;
 	position: relative;
 	margin: 0 auto;
 }
 .panel{
-	max-width: 810px ;
+	max-width: 600px ;
 	text-align:left;
 	padding: 10px 24px 10px 24px;
 	background: white;
@@ -125,7 +128,8 @@ ul{
 	text-align: left;
 }
 .nav>li{
-	color: #66757f;
+	//color: #66757f;
+	color: rgba(255,255,255,.75);
 }
 
 .global-nav , .nav, .nav>li {
@@ -164,7 +168,7 @@ ul{
 	margin-top: 17px;
 	padding: 0 10px 0 0;
 	font-size: 12px;
-	font-weight: 400;
+	//font-weight: ;
 	line-height: 1;
 }
 .topbar-left{
@@ -172,13 +176,6 @@ ul{
 }
 .topbar-right{
 	float:right;
-}
-a:hover{
-	color: $link_color ;
-}
-a{
-	text-decoration: none;
-	color: inherit;
 }
 a.top-nav-left{
 	padding: 0px 10px;
@@ -202,12 +199,14 @@ li.top-list{
 	float: left;
 }
 li.top-list:hover>a{
-	height: 42px ;
-	color: $link_color ;
+	//height: 42px ;
+	height: 46px;
+	//color: $link_color ;
+	color: white;
 }
 li.active>a{
 	height: 46px ;
-	color: $link_color ;
+	//color: $link_color ;
 }
 .content{
 	width: 100%;

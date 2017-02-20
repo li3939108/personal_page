@@ -15,6 +15,52 @@
 
 $bg_gray : #f5f5f5;
 $text_color: #292433 ;
+$link_color: #0084B4;
+
+
+h1{
+	display: block;
+	font-size: 2em;
+	font-weight: 400;
+}
+h3{
+	display: block;
+	font-size: 1.17em;
+	font-weight: 400;
+}
+h5{
+  display: block;
+  font-size: 1em ;
+  font-weight: 400 ;
+}
+a:hover{
+	color: $link_color ;
+	border-bottom: solid 1px $link_color ;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+	border-bottom: dotted 1px $link_color ;
+}
+.octicon{
+  font-family: 'octicons';
+}
+.rst{
+  font-family: 'rosseta';
+}
+
+.fa {
+  font-family: FontAwesome;
+}
+.fa,.rst,.octicon{
+  font-style: normal;
+  display: inline-block;
+  text-decoration:none;
+  vertical-align: baseline ;
+}
+p{
+text-align: justify;
+}
 /* octicons */
 @font-face{
   font-family:'octicons';
@@ -120,47 +166,6 @@ $text_color: #292433 ;
   src:url(https://abs.twimg.com/a/1394123900/font/t1/rosetta-icons-Regular.woff) format('woff'), font-url("rosetta-icons-Regular.woff") format('woff') , local('rosseta');
 }
 
-
-h1{
-	display: block;
-	font-size: 2em;
-	font-weight: 400;
-}
-h3{
-	display: block;
-	font-size: 1.17em;
-	font-weight: 400;
-}
-h5{
-  display: block;
-  font-size: 1em ;
-  font-weight: 400 ;
-}
-$link_color: #0084B4;
-a:hover{
-	color: $link_color ;
-}
-a{
-	text-decoration: none;
-	color: inherit;
-	border-bottom: dotted 1px $link_color ;
-}
-.octicon{
-  font-family: 'octicons';
-}
-.rst{
-  font-family: 'rosseta';
-}
-
-.fa {
-  font-family: FontAwesome;
-}
-.fa,.rst,.octicon{
-  font-style: normal;
-  display: inline-block;
-  text-decoration:none;
-  vertical-align: baseline ;
-}
 .rst-dots:before{content:"\f016";}
 .rst-favorite:before{content:"\f007";}
 .rst-reply:before{content:"\e007";}
