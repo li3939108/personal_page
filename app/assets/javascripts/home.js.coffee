@@ -31,7 +31,7 @@ $ ->
   $(window).scroll ->
     $('li.top-list').removeClass('active')
   $('.top-nav-left').click ->
-    $('#home').height( $($(this).attr('href')).offset().top + $(window).height() - parseInt($('#home').css('padding-top'), 10) )
+    $(window).height( $($(this).attr('href')).offset().top + $(window).height() - parseInt($('#home').css('padding-top'), 10) )
   $('.top-nav-right').click ->
     $('#home').height( $($(this).attr('href')).offset().top + $(window).height() - parseInt($('#home').css('padding-top'), 10) )
   $('.para-title').hover( 

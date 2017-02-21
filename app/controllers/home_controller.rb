@@ -30,10 +30,10 @@ class HomeController < ApplicationController
     @top_nav_lists =
         {
             'home' => {
-                :text => "Home",
-                :icon => "fa-home",
+                :text => "",#"Home",
+                :icon => "fa-chevron-circle-up",
                 :href => "#home",
-                :hidden => true,
+                #:hidden => false,
             },
             'about' => {
                 :text => "Bio",

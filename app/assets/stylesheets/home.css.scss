@@ -147,7 +147,11 @@ ul {
   margin-left: 0;
   text-align: left;
 }
+.i-home {
+  margin: ($topbar_height - 33px) 0 ($topbar_height - 33px) 0 !important;
+  font-size: $right_icon_size + 2px !important;
 
+}
 .nav li {
   //color: #66757f;
   color: rgba(255, 255, 255, .75);

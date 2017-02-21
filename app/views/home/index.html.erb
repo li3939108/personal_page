@@ -7,8 +7,8 @@
           <% @top_nav_lists.values.each do |li| %>
               <% if not li[:hidden]  %>
                   <li class="top-list top-list-<%= li[:href][1..-1] %> <%= "active" if li[:text] == @init_active %> <%= "dropdown" if li[:dropdown] %>">
-                    <a class="top-nav top-nav-left" href="<%= li[:href] %>">
-                      <span class="icon icon-left <%= li[:icon].split('-')[0] %> <%= li[:icon] %>"></span>
+                    <a class="top-nav top-nav-left top-nav-<%= li[:href][1..-1] %>" href="<%= li[:href] %>">
+                      <span class="icon icon-left <%= li[:icon].split('-')[0] %> <%= li[:icon] %> i-<%= li[:href][1..-1]%>"></span>
                       <span class="text"><%= li[:text] %></span>
                     </a>
                     <% if li[:dropdown] %>
