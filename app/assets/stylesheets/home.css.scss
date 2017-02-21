@@ -13,9 +13,9 @@ body {
   font-size: 14px;
   line-height: 18px;
   background: $bg_gray;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   margin: 0px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 ul.dropdown-content {
@@ -29,7 +29,7 @@ ul.dropdown-content {
   font: inherit;
   transition: height 700ms;
   box-shadow: 0 4px 8px #e5e5e5;
-  background: rgba(0,0,0,.6);
+  background: rgba(0,0,0,.65);
 }
 
 .dropdown-content > li:hover {
@@ -139,6 +139,7 @@ ul {
 .nav  li {
   //color: #66757f;
   color: rgba(255, 255, 255, .75);
+  font-weight: 500;
 }
 
 .global-nav, .nav, .nav > li {
@@ -224,7 +225,7 @@ li.top-list:hover  a {
   //height: 42px ;
   height: 46px;
   //color: $link_color ;
-  color: white;
+  color: rgba(255,255,255,1);
 }
 
 li.active > a {
