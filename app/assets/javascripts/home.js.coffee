@@ -22,10 +22,10 @@ $ ->
     $(this).addClass('active')
   $('.dropdown').click ->
     $('.top-list').removeClass('active')      
-    $(this).children('.dropdown-content').css('display', 'block' )  
+    $(this).children('.dropdown-content').css('visibility', 'visible' )
   $('body').click (e) ->
     if (not $(e.target).is('.dropdown-content') ) and (not $(e.target).parents().is('.dropdown-content')) and (not $(e.target).is('.dropdown') ) and (not $(e.target).parents().is('.dropdown') )
-      $('.dropdown-content').css('display', 'none')
+      $('.dropdown-content').css('visibility', 'hidden')
   $('.top-nav-left').click ->
     $('#home').height( $($(this).attr('href')).offset().top + $(window).height() - parseInt($('#home').css('padding-top'), 10) )
   $('.para-title').hover( 
