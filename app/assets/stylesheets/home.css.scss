@@ -38,18 +38,20 @@ ul.dropdown-content {
   background: rgba(0, 0, 0, 1);
 
 }
-
+$dropdown_list_height : 45px;
 .dropdown-content > li {
   text-align: left;
-  padding: 5px 15px 5px 27px;
+  padding: 0px 15px 0px 27px;
   //background: rgba(255, 255, 255, 1) ;
   background: transparent;
+    height: $dropdown_list_height !important;
 
 }
 
 .dropdown-content > li > a {
   //color: $link_color ;
   //color: rgba(50,50,50, 1);
+  line-height: $dropdown_list_height !important;
   color: rgba(255, 255, 255, .75);
   border-bottom: none;
 }
