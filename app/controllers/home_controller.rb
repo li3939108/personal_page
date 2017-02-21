@@ -11,23 +11,44 @@ class HomeController < ApplicationController
     @heroku_site = "http://chaofan.li"
     @resume = @people_tamu_addr + "/resume.pdf"
     @name = "Chaofan Li"
+    @top_nav_right_icons = {
+        'linkedin' => {
+            :text => "View me on Linkedin",
+            :icon => "fa-linkedin-square",
+            :href => "http://www.linkedin.com/in/chaofanli/",
+        },
+        'github' => {
+            :text => "View me on Github" ,
+            :icon => "fa-github",
+            :href => "https://github.com/li3939108",
+        },
+        'contacts' => {
+                :text => "Contacts",
+                :icon => "fa-envelope",
+                :href => "#contacts-panel"},
+    }
     @top_nav_lists =
         {
             'home' => {
                 :text => "Home",
                 :icon => "fa-home",
-                :href => "#home"},
+                :href => "#home",
+                :hidden => true,
+            },
             'about' => {
                 :text => "Bio",
-                :icon => "fa-user",
+                #:icon => "fa-user",
+                :icon => "fa-",
                 :href => "#about-me-panel"},
             'publications' => {
                 :text => "Publication",
-                :icon => 'fa-file-text',
+                #:icon => 'fa-file-text',
+                :icon => 'fa-',
                 :href => "#publications-panel"},
             'tools' => {
                 :text => "Softwares",
-                :icon => 'fa-caret-square-o-down',
+                #:icon => 'fa-caret-square-o-down',
+                :icon => 'fa-sort-desc',
                 :href => "#softwares",
                 :dropdown => true,
                 :dropdown_content => {
@@ -47,8 +68,9 @@ class HomeController < ApplicationController
             },
             'teaching' => {
                 :text => "Teaching",
-                :icon => 'fa-caret-square-o-down',
+#                :icon => 'fa-caret-square-o-down',
                 :href => '#teaching',
+                                :icon => 'fa-sort-desc',
                 :dropdown => true,
                 :dropdown_content => {
                     'ECEN 468' => {
@@ -64,7 +86,9 @@ class HomeController < ApplicationController
             'contacts' => {
                 :text => "Contacts",
                 :icon => "fa-envelope",
-                :href => "#contacts-panel"},
+                :href => "#contacts-panel",
+                :hidden => true,
+            },
         }
     @init_active = "Home"
     @anchor_text = Proc.new { |key|
