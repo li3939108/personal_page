@@ -66,17 +66,11 @@ class HomeController < ApplicationController
                 :icon => "fa-envelope",
                 :href => "#contacts-panel"},
         }
-    @teaching = {
-
-    }
-    @projects = {
-
-    }
     @init_active = "Home"
     @anchor_text = Proc.new { |key|
       view_context.content_tag(:span,
                                view_context.link_to(
-                                   view_context.content_tag(:span, '&nbsp;&nbsp;'.html_safe, {'class' => 'anchor-icon fa-link'}),
+                                   view_context.content_tag(:span, '&nbsp;&nbsp;'.html_safe, {'class' => 'anchor-icon fa fa-link'}),
                                    @top_nav_lists[key][:href],
                                    {'class' => 'anchor', 'title' => 'Permalink'}) +
                                    view_context.content_tag(:span, @top_nav_lists[key][:text], {'class' => 'para-title-text'}),
