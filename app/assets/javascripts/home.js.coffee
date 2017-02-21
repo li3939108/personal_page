@@ -26,6 +26,10 @@ $ ->
   $('body').click (e) ->
     if (not $(e.target).is('.dropdown-content') ) and (not $(e.target).parents().is('.dropdown-content')) and (not $(e.target).is('.dropdown') ) and (not $(e.target).parents().is('.dropdown') )
       $('.dropdown-content').css('visibility', 'hidden')
+    if (not $(e.target).is('.top-list') and (not $(e.target).parents().is('.top-list')))
+      $('.active').removeClass('active')
+  $(window).scroll ->
+    $('li.top-list').removeClass('active')
   $('.top-nav-left').click ->
     $('#home').height( $($(this).attr('href')).offset().top + $(window).height() - parseInt($('#home').css('padding-top'), 10) )
   $('.para-title').hover( 
@@ -36,8 +40,8 @@ $ ->
   )
   $('a.anchor').click ->
     $('li.top-list').removeClass('active')
-    $('li.top-list-' + $(this).attr('href').substr(1)).addClass('active')
     $('#home').height( $($(this).attr('href')).offset().top + $(window).height() - parseInt($('#home').css('padding-top'), 10) )
+    $('li.top-list-' + $(this).attr('href').substr(1)).addClass('active')
   $('.first-column').hover(
     ->
       $(this).children('.icon-link').css('opacity', 1)
