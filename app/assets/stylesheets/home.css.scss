@@ -30,7 +30,7 @@ ul.dropdown-content {
   visibility: hidden;
   float: none;
   position: absolute;
-  margin: 0px 0px 0px 10px;
+  margin: 0px 0px 0px ($left_icon_size - 15px);
   padding: 0px 0px 0px 0px;
   top: $topbar_height - 1px;
   z-index: 1;
