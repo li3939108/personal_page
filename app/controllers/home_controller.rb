@@ -102,7 +102,7 @@ class HomeController < ApplicationController
     }
     @email_gen = Proc.new { |before, after|
       view_context.content_tag(:span, before + ' ') +
-          view_context.content_tag(:span, '', {:class => 'rst rst-connect', :style => 'font-size: x-small ;'}) +
+          '@'+
           view_context.content_tag(:span, ' ' + after)
     }
     @contacts =
