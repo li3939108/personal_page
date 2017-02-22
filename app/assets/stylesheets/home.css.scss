@@ -83,7 +83,7 @@ ul.dropdown-content {
   z-index: 3;
   height: $topbar_height;
   background: black;
-  font-family: "Microsoft YaHei UI Light","Segoe UI", "DejaVu Sans", "Lucida Grande", Arial, Helvetica, Sans-Serif;
+  font-family: "Segoe UI", "DejaVu Sans","Microsoft YaHei UI", "Lucida Grande", Arial, Helvetica, Sans-Serif;
 }
 
 .topbar-left {
@@ -215,7 +215,7 @@ ul {
   vertical-align: middle;
   padding: 0px 0px 0px 0px;
   font-size: $topbar_font_size;
-  font-weight: bold;
+  font-weight: 500;
   line-height: 1em;
 }
 
