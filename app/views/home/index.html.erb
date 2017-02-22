@@ -5,10 +5,10 @@
       <div class="topbar-left" style="display: inline-block">
         <ul class="nav">
           <% @top_nav_lists.values.each do |li| %>
-              <% if not li[:hidden]  %>
+              <% if not li[:hidden] %>
                   <li class="top-list top-list-<%= li[:href][1..-1] %> <%= "active" if li[:text] == @init_active %> <%= "dropdown" if li[:dropdown] %>">
                     <a class="top-nav top-nav-left top-nav-<%= li[:href][1..-1] %>" href="<%= li[:href] %>">
-                      <span class="icon icon-left <%= li[:icon].split('-')[0] %> <%= li[:icon] %> i-<%= li[:href][1..-1]%>"></span>
+                      <span class="icon icon-left <%= li[:icon].split('-')[0] %> <%= li[:icon] %> i-<%= li[:href][1..-1] %>"></span>
                       <span class="text"><%= li[:text] %></span>
                     </a>
                     <% if li[:dropdown] %>
@@ -26,7 +26,7 @@
       <div class="topbar-right" style="display: inline-block">
         <ul class="nav">
           <% @top_nav_right_icons.values.each do |li| %>
-              <li class="top-list top-list-<%= li[:href][1..-1]%>">
+              <li class="top-list top-list-<%= li[:href][1..-1] %>">
                 <a class="top-nav top-nav-right" title="<%= li[:text] %>" href="<%= li[:href] %>">
                   <span class="icon icon-right fa <%= li[:icon] %>"></span>
                 </a>
@@ -159,9 +159,24 @@
     <ul class="vertical">
       <% @contacts.each do |list| %>
           <li>
-            <span class="first-column"><% case list[:name] when "Office" %><%= content_tag('span', '', {:class => "contact-icon icon-link #{list[:icon].split('-')[0]} #{list[:icon]}", :id => "map-button", :title => "#{list[:title]}"}) %><% else %><%= content_tag('span', '', {:class => "contact-icon #{list[:icon].split('-')[0]} #{list[:icon]}"}) %><% end %>&nbsp;&nbsp;&nbsp;<%= list[:name] %></span><span class="second-column" style="<%= "height:"+(list[:lines]*18).to_s + "px;" if list[:lines] != nil %>"><%= list[:content] %></span>
+            <span class="first-column">
+              <% case list[:name] %>
+              <% when "Office" %>
+                  <%= content_tag('span', '',
+                                  {:class => "contact-icon icon-link #{list[:icon].split('-')[0]} #{list[:icon]}",
+                                   :id => "map-button",
+                                   :title => "#{list[:title]}"})
+                  %>
+              <% else %>
+                  <%= content_tag('span', '',
+                                  {:class => "contact-icon #{list[:icon].split('-')[0]} #{list[:icon]}"}) %>
+              <% end %>&nbsp;&nbsp;&nbsp;<%= list[:name] %></span><span class="second-column" style="<%= "height:"+(list[:lines]*18).to_s + "px;" if list[:lines] != nil %>"><%= list[:content] %></span>
           </li>
+
       <% end %>
+      <li id="location-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6867.065532262262!2d-96.3377598509173!3d30.61893949607023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf8e9083618c9fe91!2sDepartment+of+Electrical+and+Computer+Engineering!5e0!3m2!1sen!2sus!4v1394444107133" width=100% height="450" frameborder="0" style="border:0"></iframe>
+      </li>
     </ul>
   </div>
   <div class="foot">

@@ -13,7 +13,7 @@ $topbar_font_size: 16px;
 $left_icon_size : 18px ;
 
 $right_icon_size : 20px;
-$right_icon_opacity : .4 ;
+$right_icon_opacity : .45 ;
 
 body {
   color: $text_color;
@@ -93,7 +93,7 @@ ul.dropdown-content {
 }
 
 .container {
-  max-width: 750px;
+  max-width: 970px;
   text-align: center;
   width: auto;
   position: relative;
@@ -148,7 +148,9 @@ ul {
   text-align: left;
 }
 .i-home {
-  margin: ($topbar_height - 34px) 0 ($topbar_height - 33px) 0 !important;
+  //margin: ($topbar_height - 34px) 0 ($topbar_height - 33px) 0 !important;
+//  line-height: $topbar_height;
+  vertical-align: middle;
   font-size: $right_icon_size + 2px !important;
 
 }
@@ -163,16 +165,17 @@ ul {
 }
 
 .icon-left {
-  margin: ($topbar_height - 35px) 0 ($topbar_height - 35px) 0px;
+  margin: ($topbar_height - 34px) 0 ($topbar_height - 33px) 0px;
   width: $left_icon_size;
   font-size: $left_icon_size;
 }
 
 .icon-right {
-  margin: $topbar_height/4 5px $topbar_height/4 0px;
+  margin: $topbar_height/4 0px $topbar_height/4 15px;
   opacity: $right_icon_opacity ;
   width: $right_icon_size;
   font-size: $right_icon_size;
+  vertical-align: middle;
 }
 
 .icon-right:hover {
@@ -199,9 +202,10 @@ ul {
 .text {
   float: left;
   margin: $topbar_height/3 1px $topbar_height/3 1px;
+  vertical-align: middle;
   padding: 0px 0px 0px 0px;
   font-size: $topbar_font_size;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1em;
 }
 

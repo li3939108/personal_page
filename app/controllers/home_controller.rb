@@ -17,11 +17,11 @@ class HomeController < ApplicationController
             :icon => "fa-linkedin-square",
             :href => "http://www.linkedin.com/in/chaofanli/",
         },
-        'github' => {
-            :text => "View me on Github" ,
-            :icon => "fa-github",
-            :href => "https://github.com/li3939108",
-        },
+      #  'github' => {
+       #     :text => "View me on Github" ,
+        #    :icon => "fa-github",
+         #   :href => "https://github.com/li3939108",
+    #    },
         'contacts' => {
                 :text => "Contacts",
                 :icon => "fa-envelope",
