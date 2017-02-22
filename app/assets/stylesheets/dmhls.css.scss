@@ -5,6 +5,7 @@ body {
   font-size: 14px;
   font-family: "Segoe UI", "Microsoft YaHei UI Light", "DejaVu Sans", "Microsoft YaHei UI", "Lucida Grande",  sans-serif;
   width: $panel_width;
+  min-width: 500px;
   position: absolute;
   right: $panel_width;
   font-weight: 500;

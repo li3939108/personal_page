@@ -12,7 +12,7 @@ $dropdown_list_height: 40px;
 $topbar_font_size: 16px;
 $left_icon_size : 18px ;
 $goldratio : 1.61803398875;
-$panel_width : 38.1966%;
+$panel_width : 38.1966% ;
 
 $right_icon_size : 20px;
 $right_icon_opacity : .45 ;
@@ -83,7 +83,7 @@ ul.dropdown-content {
   z-index: 3;
   height: $topbar_height;
   background: black;
-  font-family: "Segoe UI", "DejaVu Sans","Microsoft YaHei UI", "Lucida Grande", Arial, Helvetica, Sans-Serif;
+  font-family: "Segoe UI", "DejaVu Sans Bold","Microsoft YaHei UI", "Lucida Grande", Arial, Helvetica, Sans-Serif;
 }
 
 .topbar-left {
@@ -111,7 +111,8 @@ ul.dropdown-content {
 }
 
 .panel {
-  max-width: $panel_width;
+  width: $panel_width;
+  min-width: 500px;
   text-align: left;
   padding: 10px 24px 10px 24px;
   background: white;
