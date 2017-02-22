@@ -11,7 +11,7 @@
     <em>High Level Synthesis</em> (HLS) has been a research topic for some three decades. Since late 1980s,
     there has been continuous effort for automating the process of RTL design by generating the
     HDL code such as Verilog HDL and VHDL automatically. Previously, HLS focused on how to optimize the
-    resource usage and/or the delay for the whole work, and tread it as an optimization problem.
+    resource usage and/or the delay for the whole work, and treat it as an optimization problem.
     Thus, some mathematical optimization models were proposed to solve the HLS problem. The earliest one of
     these models might be the <em><a href="http://www.cs.tufts.edu/~soha/cadathlon03/refs/ILP_SCHED_Hwang_TCAD91.pdf">
     Integer Linear Programming</a></em> (ILP) model, which is able to get the
@@ -22,13 +22,26 @@
     which is faster than ILP model, but still much slower than the software compiler.
   </p>
   <p>
+    Recent HLS research also focuses on loop optimization,
+    an existing topic for software compiler optimization.
+    The problem is that loop structure is never necessary for either
+    programming or hardware description,
+    but only common for sequential programming of CPU.
+    It is well-known that the <a href="https://en.wikipedia.org/wiki/Functional_programming#Recursion">
+    functional programming languages prefer recursion to loop</a>,
+    and often replace loops with recursive functions with tail recursion optimization.
+    Since High-Level Synthesis is targeting hardware, which is intrinsically parallel,
+    loops might not be a proper structure for parallel programming or description of
+    parallel hardware.
+  </p>
+ 
+  <p>
     <em>Direct-Mapping High-Level Synthesis</em> (DMHLS)
     is an novel framework for <em>High Level Synthesis</em>,
-    which is fast, aiming to be competitive with software compiler for microprocessors.
+    which is fast, aiming to achieve the speed of software compiler for microprocessors.
     Rather than formulating HLS as mainly an optimization problem, DMHLS considers direct mapping in the first place,
     trying to eable accurate and clear architecture descriptions through high level languages such as C programming
-    language,
-    without automated resource sharing and loop optimizations that changes the architecture too much or
+    language, without automated resource sharing and loop optimizations that changes the architecture too much or
     "obscures the architecture"<a href="http://csg.csail.mit.edu/6.S078/6_S078_2012_www/resources/bsv_by_example.pdf">(
     BSV by Example, p12)</a>.
     DMHLS starts from <a href="http://llvm.org/">LLVM </a>Intermediate Representations (LLVM IR)
@@ -37,6 +50,7 @@
     form of intermediate representation. Although DMHLS only supports LLVM IR currently,
     the techniques underneath the framework should
     works fine for any SSA form of intermediate representations</p>
+
 
   <!--
   <h4>
