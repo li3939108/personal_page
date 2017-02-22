@@ -10,20 +10,20 @@ $text_color: #292433;
 $topbar_height: 45px;
 $dropdown_list_height: 40px;
 $topbar_font_size: 16px;
-$left_icon_size : 18px ;
-$goldratio : 1.61803398875;
-$panel_width : 38.1966% ;
-$panel_min_width : 600px;
+$left_icon_size: 18px;
+$goldratio: 1.61803398875;
+$panel_width: 38.1966%;
+$panel_min_width: 600px;
 
-$right_icon_size : 20px;
-$right_icon_opacity : .45 ;
+$right_icon_size: 20px;
+$right_icon_opacity: .45;
 
 body {
   color: $text_color;
   font-size: 14px;
   line-height: 18px;
   background: $bg_gray;
-  font-family: "DejaVu Sans", "Microsoft YaHei UI Light", "Segoe UI", "Microsoft YaHei UI Light",  "Lucida Grande",  Arial, Helvetica,Sans-Serif;
+  font-family: "DejaVu Sans", "Microsoft YaHei UI Light", "Segoe UI", "Microsoft YaHei UI Light", "Lucida Grande", Arial, Helvetica, Sans-Serif;
   margin: 0px;
 }
 
@@ -61,7 +61,6 @@ ul.dropdown-content {
   //color: $link_color ;
   //color: rgba(50,50,50, 1);
   line-height: $dropdown_list_height !important;
-  font-weight: 500;
   color: rgba(255, 255, 255, .75);
   border-bottom: none;
 }
@@ -84,7 +83,7 @@ ul.dropdown-content {
   z-index: 3;
   height: $topbar_height;
   background: black;
-  font-family: "Segoe UI", "DejaVu Sans Bold","Microsoft YaHei UI", "Lucida Grande", Arial, Helvetica, Sans-Serif;
+  font-family: "Segoe UI", "DejaVu Sans Bold", "Microsoft YaHei UI", "Lucida Grande", Arial, Helvetica, Sans-Serif;
 }
 
 .topbar-left {
@@ -94,6 +93,7 @@ ul.dropdown-content {
 .topbar-right {
   float: right;
 }
+
 .global-nav {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   height: $topbar_height;
@@ -120,7 +120,23 @@ ul.dropdown-content {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 4px 8px #e5e5e5;
   margin: 0px auto 10px auto;
-  font-family: "DejaVu Sans", "Microsoft YaHei UI", "Segoe UI", "Lucida Grande", Arial,Helvetica, Sans-Serif;
+  font-family: "DejaVu Sans", "Microsoft YaHei UI", "Segoe UI", "Lucida Grande", Arial, Helvetica, Sans-Serif;
+  h1 {
+    display: block;
+    font-size: 2em;
+    font-weight: 400;
+  }
+  h3 {
+    display: block;
+    font-size: 1.17em;
+    font-weight: 400;
+  }
+
+  h5 {
+    display: block;
+    font-size: 1em;
+    font-weight: 400;
+  }
 }
 
 ol.publication-list {
@@ -160,15 +176,16 @@ ul {
   margin-left: 0;
   text-align: left;
 }
+
 .i-home {
-  font-size: ($right_icon_size + 1px) !important;
+  font-size: ($right_icon_size + 2px) !important;
   position: relative;
   top: 2px;
 }
+
 .nav li {
   //color: #66757f;
   color: rgba(255, 255, 255, 0.8);
-  font-weight: 500;
 }
 
 .global-nav, .nav, .nav > li {
@@ -184,7 +201,7 @@ ul {
 
 .icon-right {
   margin: $topbar_height/4 0px $topbar_height/4 15px;
-  opacity: $right_icon_opacity ;
+  opacity: $right_icon_opacity;
   width: $right_icon_size;
   font-size: $right_icon_size;
   vertical-align: middle;
@@ -217,10 +234,8 @@ ul {
   vertical-align: middle;
   padding: 0px 0px 0px 0px;
   font-size: $topbar_font_size;
-  font-weight: 500;
   line-height: 1em;
 }
-
 
 a.top-nav-left {
   padding: 0px 10px;
