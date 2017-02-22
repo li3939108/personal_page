@@ -22,7 +22,7 @@ body {
   font-size: 14px;
   line-height: 18px;
   background: $bg_gray;
-  font-family: "DejaVu Sans", "Microsoft YaHei UI Light", "Segoe UI", "Microsoft YaHei UI Light",  Arial, Helvetica,Sans-Serif;
+  font-family: "DejaVu Sans", "Microsoft YaHei UI Light", "Segoe UI", "Microsoft YaHei UI Light",  "Lucida Grande",  Arial, Helvetica,Sans-Serif;
   margin: 0px;
 }
 
@@ -118,7 +118,7 @@ ul.dropdown-content {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 4px 8px #e5e5e5;
   margin: 0px auto 10px auto;
-  font-family: "DejaVu Sans", "Microsoft YaHei UI", "Segoe UI", Arial,Helvetica, Sans-Serif;
+  font-family: "DejaVu Sans", "Microsoft YaHei UI", "Segoe UI", "Lucida Grande", Arial,Helvetica, Sans-Serif;
 }
 
 ol.publication-list {
