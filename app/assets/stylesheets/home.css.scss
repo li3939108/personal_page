@@ -13,7 +13,7 @@ $topbar_font_size: 16px;
 $left_icon_size : 18px ;
 $goldratio : 1.61803398875;
 $panel_width : 38.1966% ;
-$panel_min_width : 500px;
+$panel_min_width : 600px;
 
 $right_icon_size : 20px;
 $right_icon_opacity : .45 ;
@@ -105,7 +105,7 @@ ul.dropdown-content {
 
 .container {
   width: $panel_width*$goldratio;
-  min-width: $panel_min_width + 200px;
+  min-width: ($panel_min_width + 150px);
   text-align: center;
   position: relative;
   margin: 0 auto;
