@@ -8,6 +8,6 @@ body {
   font-weight: 300;
   width: $panel_width;
   min-width: 500px;
-  position: absolute;
+  margin-left: $panel_width * $goldratiol ;
   right: $panel_width;
 }
