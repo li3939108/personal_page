@@ -11,6 +11,8 @@ $topbar_height: 45px;
 $dropdown_list_height: 40px;
 $topbar_font_size: 16px;
 $left_icon_size : 18px ;
+$goldratio : 1.61803398875;
+$panel_width : 38.1966%;
 
 $right_icon_size : 20px;
 $right_icon_opacity : .45 ;
@@ -59,6 +61,7 @@ ul.dropdown-content {
   //color: $link_color ;
   //color: rgba(50,50,50, 1);
   line-height: $dropdown_list_height !important;
+  font-weight: 500;
   color: rgba(255, 255, 255, .75);
   border-bottom: none;
 }
@@ -93,7 +96,7 @@ ul.dropdown-content {
 }
 
 .container {
-  max-width: 970px;
+  max-width: $panel_width*$goldratio;
   text-align: center;
   width: auto;
   position: relative;
@@ -101,7 +104,7 @@ ul.dropdown-content {
 }
 
 .panel {
-  max-width: 600px;
+  max-width: $panel_width;
   text-align: left;
   padding: 10px 24px 10px 24px;
   background: white;
@@ -148,15 +151,13 @@ ul {
   text-align: left;
 }
 .i-home {
-  //margin: ($topbar_height - 34px) 0 ($topbar_height - 33px) 0 !important;
-//  line-height: $topbar_height;
-  vertical-align: middle;
-  font-size: $right_icon_size + 2px !important;
-
+  font-size: ($right_icon_size + 1px) !important;
+  position: relative;
+  top: 2px;
 }
 .nav li {
   //color: #66757f;
-  color: rgba(255, 255, 255, .75);
+  color: rgba(255, 255, 255, 0.8);
   font-weight: 500;
 }
 
@@ -165,9 +166,10 @@ ul {
 }
 
 .icon-left {
-  margin: ($topbar_height - 34px) 0 ($topbar_height - 33px) 0px;
+  margin: ($topbar_height - 35px) 0 ($topbar_height - 35px) 0px;
   width: $left_icon_size;
   font-size: $left_icon_size;
+  vertical-align: middle;
 }
 
 .icon-right {
