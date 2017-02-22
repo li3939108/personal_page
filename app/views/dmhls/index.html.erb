@@ -1,4 +1,5 @@
 <%= stylesheet_link_tag "dmhls" %>
+<% @last_modify_date = File.open(__FILE__).mtime.strftime("%Y-%m-%d %H:%M:%S " + File.open(__FILE__).mtime.zone) %>
 <div style="margin-left: 30px ;width: 500px;">
   <h1 style=" font-weight: bold;">
     DMHLS
@@ -26,7 +27,7 @@
     an existing topic for software compiler optimization.
     The problem is that loop structure is never necessary for either
     programming or hardware description,
-    but only common for sequential programming of CPU.
+    but only especially appropriate for sequential programming of CPU.
     It is well-known that the <a href="https://en.wikipedia.org/wiki/Functional_programming#Recursion">
     functional programming languages prefer recursion to loop</a>,
     and often replace loops with recursive functions with tail recursion optimization.
@@ -34,7 +35,22 @@
     loops might not be a proper structure for parallel programming or description of
     parallel hardware.
   </p>
- 
+  <p>
+    Loop optimization have another problem: it changes the architecture too much.
+    <a href="https://en.wikipedia.org/wiki/Loop_unrolling">Loop unrolling</a>,
+    for example a common loop optimization technique, only reduces the execution time by
+    removing the instructions used for loop bounds checking and some other trivial calculations,
+    if the loop is running on a CPU.
+    The asymptotic time complexity for the program is still the same.
+    However, if the loop unrolling is used for high-level synthesis,
+    it actually copys the loop body.
+    The asymptotic space or area will change from constant space to linear space,
+    if the loop is fully unrolled.
+    Although the execution time for the loop also drops from linear time to constant time,
+    the space or area is crucial for hardware to the same extent as the execution time.
+    
+  </p>
+
   <p>
     <em>Direct-Mapping High-Level Synthesis</em> (DMHLS)
     is an novel framework for <em>High Level Synthesis</em>,
@@ -69,7 +85,7 @@
   </p>
   <hr/>
   <p style="text-align: right;">
-    Feb 2017<br/>
+    <%= @last_modify_date %><br/>
     Chaofan Li
   </p>
 </div>
