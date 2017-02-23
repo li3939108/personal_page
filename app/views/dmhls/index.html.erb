@@ -84,7 +84,8 @@
     but the size of random access memory is limited.
     This difficulty causes many HLS tools completely disable recursion.
   <p>
-    However, a certain type of recursion is still very useful for high level synthesis and
+    Despite the difficulty of recursive function calls,
+    a certain type of recursion is still very useful for high level synthesis and
     the circuit size can be statically determined, which can be defined as structure recursion.
     Some literature for programming has the concept of
     <a href="https://en.wikipedia.org/wiki/Recursion_(computer_science)#Structural_versus_generative_recursion">
@@ -95,11 +96,23 @@
   </p>
   <p>
     A good example of structure recursion is <a href="https://www.cs.cmu.edu/~guyb/papers/Ble93.pdf">prefix sum</a>,
-    which is a pretty simple and fundamental operation for parallel algorithms.
+    a pretty simple and fundamental operation for parallel algorithms, as shown in the figure below.
+    Note that the addition operation can be generalized to any
+    <a href="https://en.wikipedia.org/wiki/Associative_property#Definition">associative</a>
+    operations such as max, min, and multiplication.
+  <p>
+    <%= image_tag("prefix_sum.svg", alt: "prefix sum", width: "61.8%") %>
+  <p>
+  <p>
+    We can see that the operation for sum of 8 numbers is decomposing the 8 numbers into two set of numbers,
+    with each having 4 numbers, then the operation for sum of 4 numbers is recursively decomposing them into two
+    set of numbers with each having 2 numbers, and finally, the operation for sum of two numbers terminates
+    the recursive decomposition and returns the sum of these two numbers.
+  </p>
   </p>
   </p><!--
   <p>
-    Despite the difficulty of recursive function calls, recursion is still very useful for high-level synthesis.
+    , recursion is still very useful for high-level synthesis.
     Noting that recursive function is only one form of recursison. Originally, it stems from recursive definition
 
   </p>-->
