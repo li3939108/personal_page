@@ -4,11 +4,11 @@
   <h1 style=" font-weight: bold;">
     DMHLS
   </h1>
-  <h3 style="font-weight: bold;">
+  <h2 style="font-weight: bold;">
     Direct-Mapping High-Level Synthesis
-  </h3>
+  </h2>
   <hr/>
-  <h4>Introduction</h4>
+  <h3>Introduction</h3>
   <p>
     <em>High Level Synthesis</em> (HLS) has been a research topic for some three decades. Since late 1980s,
     there has been continuous effort for automating the process of RTL design by generating the
@@ -28,7 +28,7 @@
     an existing topic mainly for software compiler optimization.
     The problem is that loop structure is never necessary for either
     programming or hardware description,
-    but only especially appropriate for sequential programming of CPU.
+    but only especially suitable for sequential programming of CPU.
     It is well-known that the <a href="https://en.wikipedia.org/wiki/Functional_programming#Recursion">
     functional programming languages prefer recursion to loop</a>,
     and often replace loops with recursive functions with tail recursion optimization.
@@ -39,9 +39,9 @@
   <p>
     Loop optimization has another problem: it changes the architecture too much.
     <a href="https://en.wikipedia.org/wiki/Loop_unrolling">Loop unrolling</a>,
-    for example a common loop optimization technique, only reduces the execution time by
-    removing the instructions used for loop bounds checking and some other trivial calculations,
-    if the loop is running on a CPU.
+    for example, a common loop optimization technique -- if the loop is running on a CPU --
+    only reduces the execution time by removing the instructions used for loop bounds checking
+    and some other trivial calculations such as pointer increment.
     The asymptotic time complexity for the program is still the same.
     However, if the loop unrolling is used for high-level synthesis,
     it actually copys the loop body.
@@ -69,17 +69,27 @@
     works fine for any SSA form of intermediate representations</p>
 
 
-  <!--
+
   <h4>
-    Structural Recursion
+    Structure Recursion
   </h4>
   <p>
-    Almost all programming languages supported
-    <em><a href="https://en.wikipedia.org/wiki/Recursion_(computer_science)">recursion</a></em>.
+    Unfortunately, few existing high-level synthesis framework support recursion.
+    The difficulty is that if the HLS tool inlines all the functions calls,
+    the size of the synthesized circuit cannot be determined statically (at compile time)
+    for recursive function calls with runtime arguments;
+    while if the HLS tool doesn't inline functions, a <a href="https://en.wikipedia.org/wiki/Call_stack">
+    call stack</a> is required to implement function call. However, large continuous memory storage might not
+    always be present for hardware. For example, in FPGA, there are many distributed memory elements,
+    but the size of random access memory is limited.
+    This difficulty causes many HLS tools completely disable recursion.
+  </p><!--
+  <p>
+    Despite the difficulty of recursive function calls, recursion is still very useful for high-level synthesis.
+    Noting that recursive function is only one form of recursison. Originally, it stems from recursive definition
 
+  </p>-->
 
-  </p>
-  -->
   <p>
     <!--<a href="https://github.com/li3939108/dmhls/archive/master.zip">Download</a><br/>-->
     <a href="https://github.com/li3939108/dmhls">Github Repository</a>
@@ -87,6 +97,6 @@
   <hr/>
   <p style="text-align: right;">
     <%= @last_modify_date %><br/>
-    Chaofan Li
+    by Chaofan Li
   </p>
 </div>
