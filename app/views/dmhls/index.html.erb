@@ -91,10 +91,10 @@
     <a href="https://en.wikipedia.org/wiki/Recursion_(computer_science)#Structural_versus_generative_recursion">
       structurally recursive functions or structural recursion</a>,
     which is a very similar concept though not exactly the same idea.
-    The key characteristic of structure recursion is that the structure of the argument for a recursive function
-    is recursively defined, and the function is decomposing the argument recursively.
   </p>
   <p>
+    The key characteristic of structure recursion is that the structure of the argument for a recursive function
+    is recursively defined, and the function is decomposing the argument recursively.
     A good example of structure recursion is <a href="https://www.cs.cmu.edu/~guyb/papers/Ble93.pdf">prefix sum</a>,
     a pretty simple and fundamental operation for parallel algorithms, as shown in the figure below.
     Note that the addition operation can be generalized to any
@@ -102,20 +102,29 @@
     operations such as max, min, and multiplication.
   <p>
     <%= image_tag("prefix_sum.svg", alt: "prefix sum", width: "61.8%") %>
-  <p>
+  </p>
   <p>
     We can see that the operation for sum of eight numbers is decomposing the eight numbers into two set of numbers,
     with each having four numbers, then the operation for sum of four numbers is recursively decomposing them into two
     set of numbers with each having two numbers, and finally, the operation for sum of two numbers terminates
     the recursive decomposition and returns the sum of these two numbers.
   </p>
-  </p>
-  </p><!--
+  <h4>
+    Tail Recursion
+  </h4>
   <p>
-    , recursion is still very useful for high-level synthesis.
-    Noting that recursive function is only one form of recursison. Originally, it stems from recursive definition
+    Another type of recursion that is very useful is tail recursion.
+    Functional programming paradigm has already used tail recursion to implement
+    loops. Since tail recursion is actually another form of loops, the circuit size
+    can also be statically determined if the relevant input argument of tail recursive function
+    is constant.
+  </p>
+  <!--
+    <p>
+      , recursion is still very useful for high-level synthesis.
+      Noting that recursive function is only one form of recursison. Originally, it stems from recursive definition
 
-  </p>-->
+    </p>-->
 
   <p>
     <!--<a href="https://github.com/li3939108/dmhls/archive/master.zip">Download</a><br/>-->
