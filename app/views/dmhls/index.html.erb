@@ -42,13 +42,14 @@
     for example, a common loop optimization technique -- if the loop is running on a CPU --
     only reduces the execution time by removing the instructions used for loop bounds checking
     and some other trivial calculations such as pointer increment.
-    The asymptotic time complexity for the program is still the same.
+    The asymptotic time complexity for the program is always the same.
     However, if the loop unrolling is used for high-level synthesis,
     it actually copys the loop body.
     The asymptotic space or area will change from constant space to linear space,
     if the loop is fully unrolled.
     Although the execution time for the loop also drops from linear time to constant time,
     the space or area is crucial for hardware to the same extent as the execution time.
+    It is very difficult to describe the hardware architecture clearly through loop optimization pragmas.
 
   </p>
 
@@ -69,7 +70,6 @@
     works fine for any SSA form of intermediate representations</p>
 
 
-
   <h4>
     Structure Recursion
   </h4>
@@ -83,6 +83,16 @@
     always be present for hardware. For example, in FPGA, there are many distributed memory elements,
     but the size of random access memory is limited.
     This difficulty causes many HLS tools completely disable recursion.
+  <p>
+    However, a certain type of recursion is still very useful for high level synthesis and
+    the circuit size can be statically determined, which can be defined as structure recursion.
+    Some literature for programming has the concept of
+    <a href="https://en.wikipedia.org/wiki/Recursion_(computer_science)#Structural_versus_generative_recursion">
+      structurally recursive functions or structural recursion</a>,
+    which is a very similar concept though not exactly the same idea.
+    The key characteristic of structure recursion is that the structure of the argument for a recursive function
+    is recursively defined, and the function is decomposing the argument recursively.
+  </p>
   </p><!--
   <p>
     Despite the difficulty of recursive function calls, recursion is still very useful for high-level synthesis.
