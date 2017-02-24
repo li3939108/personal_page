@@ -99,7 +99,7 @@
     Another example of structrue recursion is <a href="https://en.wikipedia.org/wiki/Bitonic_sorter">bitonic sorter</a>,
     as shown in the figure below, which is a parallel implementation of merge sort and used in GPU computing for soring.
     Each line in the bitonic sorter represents a number and each arrow means it will sort the two numbers
-    accroding to the direction of the arrow. The example is more complex and has two nested structure recursion.
+    accroding to the direction of the arrow. The example is more complex and has two nested recursive structures.
   </p>
   <p>
     <%= image_tag("BitonicSort1.svg", alt: "Bitonic Sorter", width: "100%") %>
@@ -112,7 +112,8 @@
     Functional programming paradigm has already used tail recursion to implement
     loops. Since tail recursion is actually another form of loops, the circuit size
     can also be statically determined if the relevant input argument of tail recursive function
-    is constant.
+    is constant. With respect to high-level synthesis, tail recursion is better than looping
+    because the transformed and optimized loops can be expressed directly and more clearly using tail recursion.
   </p>
 <h3>
   DMHLS
