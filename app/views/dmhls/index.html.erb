@@ -109,6 +109,15 @@
     set of numbers with each having two numbers, and finally, the operation for sum of two numbers terminates
     the recursive decomposition and returns the sum of these two numbers.
   </p>
+  <p>
+    Another example of structrue recursion is <a href="https://en.wikipedia.org/wiki/Bitonic_sorter">bitonic sorter</a>,
+    as shown in the figure below, which is a parallel implementation of merge sort and used in GPU computing for soring.
+    Each line in the bitonic sorter represents a number and each arrow means it will sort the two numbers
+    accroding to the direction of the arrow. The example is more complex and has two nested structure recursion.
+  </p>
+  <p>
+    <%= image_tag("BitonicSort1.svg", alt: "Bitonic Sorter", width: "100%") %>
+  </p>
   <h4>
     Tail Recursion
   </h4>
