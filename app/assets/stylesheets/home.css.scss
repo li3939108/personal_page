@@ -83,7 +83,7 @@ ul.dropdown-content {
   z-index: 3;
   height: $topbar_height;
   background: black;
-  font-family: "Segoe UI", "Microsoft YaHei UI","DejaVu Sans Bold",  "Lucida Grande", Arial, Helvetica, Sans-Serif;
+  font-family: "Segoe UI",  "Lucida Grande", "Microsoft YaHei UI","DejaVu Sans Bold", Arial, Helvetica, Sans-Serif;
 }
 
 .topbar-left {
@@ -120,7 +120,7 @@ ul.dropdown-content {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 4px 8px #e5e5e5;
   margin: 0px auto 10px auto;
-  font-family: "DejaVu Sans", "Microsoft YaHei UI", "Segoe UI", "Lucida Grande", Arial, Helvetica, Sans-Serif;
+  font-family: "Segoe UI", "Lucida Grande","DejaVu Sans", "Microsoft YaHei UI",  Arial, Helvetica, Sans-Serif;
   h1 {
     display: block;
     font-size: 2em;
