@@ -105,6 +105,24 @@ class HomeController < ApplicationController
           '@'+
           view_context.content_tag(:span, ' ' + after)
     }
+    @publications ={
+     'DAC15' =>  {
+            :authors => "Chaofan Li, Wei Luo, Sachin S. Sapatnekar and Jiang Hu",
+            :date => "June 2015",
+            :cj => "52nd Design Automation Conference (DAC)",
+            :link => "http://people.tamu.edu/~li3939108/LiDAC15a.pdf",
+            :slink => 'http://people.tamu.edu/~li3939108/LiDAC15a_slides.pdf',
+            :title => 'Joint precision optimization and high level synthesis for approximate computing',
+        },
+     'ICCAD16' => {
+         :authors => "Chaofan Li, Sachin S. Sapatnekar and Jiang Hu",
+         :date => "Nov 2016",
+         :cj => "35th International Conference on Computer-Aided Design (ICCAD)",
+         :slink => 'http://people.tamu.edu/~li3939108/LiICCAD16_slides.pdf',
+         :link =>  "http://people.tamu.edu/~li3939108/LiICCAD16.pdf",
+         :title => 'Control Synthesis and Delay Sensor Deployment for Efficient ASV Designs',
+     }
+    }
     @contacts =
         [
             {

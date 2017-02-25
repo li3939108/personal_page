@@ -71,22 +71,14 @@
   <div class="container panel" id="<%= @top_nav_lists['publications'][:href][1..-1] %>">
     <h3><%= @anchor_text.call('publications') %></h3>
     <ol class="publication-list">
-      <li>Chaofan Li, Wei Luo, Sachin S. Sapatnekar and Jiang Hu.
-        "<%= link_to('Joint precision optimization and high level synthesis for approximate computing',
-                     "http://people.tamu.edu/~li3939108/LiDAC15a.pdf", {'class' => 'content-link file-link'}) %>".
-        <em>52nd Design Automation Conference (DAC)</em>, June 2015.
-        [<%= link_to('slides', 'http://people.tamu.edu/~li3939108/LiDAC15a_slides.pdf',
-                     {'class' => 'content-link file-link'}) %>]
+      <% @publications.values.each do |li| %>
+      <li>
+        <%= li[:authors] %>.
+        "<span style="text-transform: lowercase;"><%= link_to(li[:title], li[:link],  {'class' => 'content-link file-link'} ) %></span>".
+        <em><%= li[:cj] %></em>, <%= li[:date] %>.
+        [<%= link_to('slides',li[:slink], class: 'content-link file-link') %>]
       </li>
-      <li>Chaofan Li, <a href="http://people.ece.umn.edu/users/sachin">Sachin S. Sapatnekar</a> and Jiang Hu.
-        "<%= link_to('Control Synthesis and Delay Sensor Deployment for Efficient ASV Designs',
-                     "http://people.tamu.edu/~li3939108/LiICCAD16.pdf",
-                     {'class' => 'content-link file-link'}) %>".
-        <em>35th International Conference on Computer-Aided Design (ICCAD)</em>, Nov 2016.
-        [<%= link_to('slides',
-                     'http://people.tamu.edu/~li3939108/LiICCAD16_slides.pdf',
-                     {'class' => 'content-link file-link'}) %>]
-      </li>
+          <% end%>
     </ol>
   </div>
   <!--
