@@ -97,6 +97,10 @@
     with each having four numbers, then the operation for sum of four numbers is recursively decomposing them into two
     set of numbers with each having two numbers, and finally, the operation for sum of two numbers terminates
     the recursive decomposition and returns the sum of these two numbers.
+
+    The structure recursion can be implemented by Verilog parameterized module with <code>generate</code> block.
+    For example, below is a Verilog implementation of the simplified prefix sum example.
+    <script src="https://gist.github.com/li3939108/7d0174cfcf5c4cc9440e8552323ae0ed.js"></script>
   </p>
   <p>
     Another example of structrue recursion is <a href="https://en.wikipedia.org/wiki/Bitonic_sorter">bitonic sorter</a>,
