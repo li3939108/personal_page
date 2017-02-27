@@ -144,8 +144,11 @@
 
   <p>
     Since it is an ongoing project, new features will be added to it, and the interface might be changing frequently.
-    Currently, I have finished the Verilog code generation of functions without loops or recursion. Next, I will first
-    focus on the recursion part. Arrays and pointers are not supported yet, since it also assumes that large random-access
+    Currently, I have finished the Verilog code generation of functions without loops or recursion. I uses
+    As-Soon-As-Possible (ASAP) scheduling and enforces pipeline parallelism, which means the generated circuits will be
+    fully pipelined with no resource sharing. I am considering using loops exclusively for resource sharing.
+    Next, I will focus on the recursion part. Arrays and pointers are not supported yet,
+    since it also assumes that large random-access
     memory with continuous address exists. I am still thinking about the proper way to translate them.
   </p>
   <!--
