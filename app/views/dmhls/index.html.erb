@@ -25,16 +25,17 @@
     which is faster than ILP model, but still much slower than the software compiler.
   </p>
   <p>
-    Recent HLS research also focuses on loop optimization,
+    Recent HLS research also focuses on loop optimization or transformation,
     an existing topic mainly for software compiler optimization.
-    The problem is that loop structure is never necessary for either
+    However, there are some problems using loop optimization or transformation for HLS.
+    The first problem is that loop structure is never necessary for either
     programming or hardware description,
     but only especially suitable for sequential programming of CPU.
     It is well-known that the <a href="https://en.wikipedia.org/wiki/Functional_programming#Recursion">
     functional programming languages prefer recursion to loop</a>,
     and often replace loops with recursive functions with tail recursion optimization.
     Since High-Level Synthesis is targeting hardware, which is intrinsically parallel,
-    loops might not be a proper structure for parallel programming or description of
+    loops might not be a proper structure for  description of
     intrinscally parallel hardware.
   </p>
   <p>
@@ -140,6 +141,13 @@
     form of intermediate representation. Although DMHLS only supports LLVM IR currently,
     the techniques underneath the framework should
     works fine for any SSA form of intermediate representations</p>
+
+  <p>
+    Since it is an ongoing project, new features will be added to it, and the interface might be changing frequently.
+    Currently, I have finished the Verilog code generation of functions without loops or recursion. Next, I will first
+    focus on the recursion part. Arrays and pointers are not supported yet, since it also assumes that large random-access
+    memory with continuous address exists. I am still thinking about the proper way to translate them.
+  </p>
   <!--
     <p>
       , recursion is still very useful for high-level synthesis.
