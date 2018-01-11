@@ -132,6 +132,13 @@ class HomeController < ApplicationController
                 :icon => 'fa-envelope-o',
                 :lines => 1,
             },
+			{
+				:name => "Telegram",
+				:content =>
+					view_context.link_to('@chowfan','https://t.me/chowfan'),
+				:icon => 'fa-telegram',
+				:lines => 1,
+			},
             {
                 :name => "Homepages",
                 :content =>
