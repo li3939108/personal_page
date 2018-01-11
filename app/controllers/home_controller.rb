@@ -135,7 +135,7 @@ class HomeController < ApplicationController
 			{
 				:name => "Telegram",
 				:content =>
-					view_context.link_to('@chowfan','https://t.me/chowfan'),
+					view_context.link_to('@chowfan','https://t.me/chowfan') + view_context.tag('br'),
 				:icon => 'fa-telegram',
 				:lines => 1,
 			},
