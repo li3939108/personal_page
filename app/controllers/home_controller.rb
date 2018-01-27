@@ -60,6 +60,10 @@ class HomeController < ApplicationController
                         :text => "RubyILP",
                         :link => "https://github.com/li3939108/ilpext",
                     },
+					'blocktree' => {
+						:text => "Blocktree",
+						:link => "https://github.com/li3939108/bips/blob/master/BIP_BLOCKTREE.mediawiki",
+					}
                     #			'klp'=>{
                     #				:text => "KL-Part",
                     #				:link => "/klp",
