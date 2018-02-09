@@ -63,7 +63,11 @@ class HomeController < ApplicationController
 					'blocktree' => {
 						:text => "Blocktree",
 						:link => "https://github.com/li3939108/bips/blob/master/BIP_BLOCKTREE.mediawiki",
-					}
+					},
+					'Regular Graph Gen'=>{
+						:text => "Regular Graph Generator",
+						:link => "http://people.tamu.edu/~li3939108/Introduction.pdf",
+					},
                     #			'klp'=>{
                     #				:text => "KL-Part",
                     #				:link => "/klp",
