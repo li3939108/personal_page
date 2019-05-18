@@ -76,7 +76,7 @@
             <%= li[:authors] %>.
             "<span style="text-transform: lowercase;"><%= link_to(li[:title], li[:link], {'class' => 'content-link file-link'}) %></span>".
             <em><%= li[:cj] %></em>, <%= li[:date] %>.
-            [<%= link_to('slides', li[:slink], class: 'content-link file-link') %>]
+            [<%= link_to('slides', li[:slink], class: 'content-link file-link') %>] (Acceptance rate = <%= li[:acceptance_rate] %>)
           </li>
       <% end %>
     </ol>

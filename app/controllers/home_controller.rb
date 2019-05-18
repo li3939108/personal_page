@@ -60,6 +60,14 @@ class HomeController < ApplicationController
                         :text => "RubyILP",
                         :link => "https://github.com/li3939108/ilpext",
                     },
+					'blocktree' => {
+						:text => "Blocktree",
+						:link => "https://github.com/li3939108/bips/blob/master/BIP_BLOCKTREE.mediawiki",
+					},
+					'Regular Graph Gen'=>{
+						:text => "Regular Graph Generator",
+						:link => "http://people.tamu.edu/~li3939108/Introduction.pdf",
+					},
                     #			'klp'=>{
                     #				:text => "KL-Part",
                     #				:link => "/klp",
@@ -113,6 +121,7 @@ class HomeController < ApplicationController
             :link => "http://people.tamu.edu/~li3939108/LiDAC15a.pdf",
             :slink => 'http://people.tamu.edu/~li3939108/LiDAC15a_slides.pdf',
             :title => 'Joint precision optimization and high level synthesis for approximate computing',
+			      :acceptance_rate => '20.15%',
         },
      'ICCAD16' => {
          :authors => "Chaofan Li, Sachin S. Sapatnekar and Jiang Hu",
@@ -121,6 +130,7 @@ class HomeController < ApplicationController
          :slink => 'http://people.tamu.edu/~li3939108/LiICCAD16_slides.pdf',
          :link =>  "http://people.tamu.edu/~li3939108/LiICCAD16.pdf",
          :title => 'Control Synthesis and Delay Sensor Deployment for Efficient ASV Designs',
+		    :acceptance_rate => '23.8%',
      },
      'ISQED19' => {
          :authors => "Chaofan Li, Sachin S. Sapatnekar and Jiang Hu",

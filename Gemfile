@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.2.3'
+
 #gem "font-awesome-rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2'
@@ -38,7 +40,7 @@ end
 
 # Use unicorn as the app server
 # gem 'unicorn'
-#gem "passenger"
+gem "passenger"
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
