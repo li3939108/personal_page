@@ -121,6 +121,14 @@ class HomeController < ApplicationController
          :slink => 'http://people.tamu.edu/~li3939108/LiICCAD16_slides.pdf',
          :link =>  "http://people.tamu.edu/~li3939108/LiICCAD16.pdf",
          :title => 'Control Synthesis and Delay Sensor Deployment for Efficient ASV Designs',
+     },
+     'ISQED19' => {
+         :authors => "Chaofan Li, Sachin S. Sapatnekar and Jiang Hu",
+         :date => "April 2019",
+         :cj => "ISQED",
+         :slink => '',
+         :link =>  "",
+         :title => 'Fast Mapping Based High-Level Synthesis of Pipelined Circuits',
      }
     }
     @contacts =
