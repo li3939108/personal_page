@@ -76,7 +76,7 @@ GEM
     passenger (6.0.2)
       rack
       rake (>= 0.8.1)
-    pg (1.1.4)
+    pg (0.21.0)
     rack (1.6.11)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -144,7 +144,7 @@ DEPENDENCIES
   jquery-rails
   newrelic_rpm
   passenger
-  pg
+  pg (~> 0.20)
   rails (~> 4.2)
   sass-rails (~> 4.0.0)
   therubyracer
